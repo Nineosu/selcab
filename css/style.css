@@ -181,12 +181,12 @@ main.absolute-header {
     right: 0;
     width: 11px;
     height: 6px;
-    background: url('/img/header__link-arrow.svg') no-repeat center;
+    background: url('../img/header__link-arrow.svg') no-repeat center;
     background-size: contain;
 }
 
 .header-white .nav-link-more::after {
-    background-image: url('/img/header-black__link-arrow.svg');
+    background-image: url('../img/header-black__link-arrow.svg');
 }
 
 .header__tel {
@@ -223,7 +223,7 @@ nav .header__tel {
 /* Main-bunner start */
 
 .main-bunner {
-    background: url('/img/main-bunner.jpg') no-repeat center;
+    background: url('../img/main-bunner.jpg') no-repeat center;
     background-size: cover;
     padding-top: 291px;
     margin-bottom: 50px;
@@ -323,15 +323,15 @@ nav .header__tel {
     z-index: 2;
 }
 
-.catalog-slider-next,
-.catalog-slider-prev {
+.swiper .catalog-slider-next,
+.swiper .catalog-slider-prev {
     width: 58px;
     height: 58px;
-    background: url('/img/slider-next-arrow.svg') no-repeat center;
+    background: url('../img/slider-next-arrow.svg') no-repeat center;
 }
-/* .catalog-slider-prev {
+.catalog-slider-prev {
     transform: rotate(180deg);
-} */
+}
 .main__catalog-slider .swiper-button-disabled {
     opacity: 1;
     filter:brightness(3.5) grayscale(1);
@@ -556,7 +556,7 @@ nav .header__tel {
     position: relative;
     padding: 70px 0;
     margin-bottom: 80px;
-    background: url('/img/portfolio-bg.png') no-repeat center #3944DE;
+    background: url('../img/portfolio-bg.png') no-repeat center #3944DE;
     background-size: cover;
 }
 
@@ -585,14 +585,14 @@ nav .header__tel {
 }
 
 .swiper-button-prev {
-    background: url(/img/portfolio-prev.png) no-repeat center;
+    background: url(../img/portfolio-prev.png) no-repeat center;
     background-size: contain;
     width: 94px;
     height: 47px;
     left: 0;
 }
 .swiper-button-next {
-    background: url(/img/portfolio-next.png) no-repeat center;
+    background: url(../img/portfolio-next.png) no-repeat center;
     background-size: contain;
     width: 94px;
     height: 47px;
@@ -940,7 +940,7 @@ ul.breadcrumb li+li:before {
     -ms-appearance: none; /* IE */
     outline: none;
     cursor: pointer;
-    background: url('/img/header-black__link-arrow.svg') no-repeat 95%;
+    background: url('../img/header-black__link-arrow.svg') no-repeat 95%;
     box-shadow: 0px 4px 20px 0px #0000001A;
     padding: 20px;
     
@@ -965,7 +965,7 @@ select {
     -ms-appearance: none; /* IE */
     outline: none;
     cursor: pointer;
-    background: url('/img/header-black__link-arrow.svg') no-repeat right;
+    background: url('../img/header-black__link-arrow.svg') no-repeat right;
 }
 
 .products__filter-factura {
@@ -1261,7 +1261,7 @@ select {
 /* ----------------------- */
 
 main section.intro-bunner {
-    background: url('/img/intro-bunner.jpg') no-repeat center;
+    background: url('../img/intro-bunner.jpg') no-repeat center;
     background-size: cover;
     margin-bottom: 40px;
 }
@@ -1551,11 +1551,11 @@ ul.page__navigation .page-show {
     top: -5%;
 }
 .reviews-prev {
-    background: url(/img/portfolio-next.png);
+    background: url(../img/portfolio-next.png);
     transform: rotate(180deg);
 }
 .reviews-next {
-    background: url(/img/portfolio-prev.png);
+    background: url(../img/portfolio-prev.png);
     transform: rotate(180deg);
 }
 
@@ -1602,7 +1602,7 @@ ul.page__navigation .page-show {
     display: block;
     width: 16px;
     height: 16px;
-    background: url('/img/reviews__rate-star.svg') no-repeat center;
+    background: url('../img/reviews__rate-star.svg') no-repeat center;
 }
 
 .reviews__card-text {
@@ -1620,7 +1620,7 @@ ul.page__navigation .page-show {
     display: flex;
     flex-direction: column;
     padding: 25px;
-    background: url('/img/certificates-img.svg') no-repeat right bottom;
+    background: url('../img/certificates-img.svg') no-repeat right bottom;
     background-color: #D9E9FA;
     height: 248px;
 }
@@ -2409,7 +2409,7 @@ a.footer__bottom-text {
     }
 
     .page__navigation {
-        background: url('/img/header-black__link-arrow.svg') no-repeat right 21px;
+        background: url('../img/header-black__link-arrow.svg') no-repeat right 21px;
     }
 
     .page__navigation-item:not(:first-child) {
