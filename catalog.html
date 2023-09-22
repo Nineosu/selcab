@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СмоленскЭлектроКабель</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="header header-white static-header">
+        <div class="wrapper">
+            <div class="header__wrapper">
+                <div class="header__burger" id="nav-burger">
+                    <span></span>
+                    <span></span>
+                </div>
+                <img class="header__logo" src="./img/header-logo_black.png" alt="Логотип">
+
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item">
+                            <a href="./catalog.html" class="header__nav-link nav-link-more">Каталог продукции</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="./about.html" class="header__nav-link">О компании</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="./delivery.html" class="header__nav-link">Доставка и оплата</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="./contacts.html" class="header__nav-link">Контакты</a>
+                        </li>
+                    </ul>
+
+                    <div class="header__tel">
+                        <img src="./img/header__tel-ico.png" alt="" class="header__tel-ico">
+                        <p class="header__tel-number">+7 (4812) 250 - 655</p>
+                    </div>
+                </nav>
+
+                <div class="header__tel">
+                    <img src="./img/header-black__tel-ico.png" alt="" class="header__tel-ico">
+                    <p class="header__tel-number">+7 (4812) 250 - 655</p>
+                </div>
+
+                <div class="header__links">
+                    <a href="#!" class="header__links-item">
+                        <img src="./img/header-black__links-account.png" alt="" class="header__links-ico">
+                    </a>
+                    <a href="./basket.html" class="header__links-item">
+                        <img src="./img/header__links-cart.svg" alt="" class="header__links-ico">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="catalog-main page">
+        <section class="catalog">
+            <div class="wrapper">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb__item">
+                        <a href="./index.html" class="breadcrumb__item-link">Главная</a>
+                    </li>
+                    <li class="breadcrumb__item breadcrumb-active">
+                        <a href="./catalog.html" class="breadcrumb__item-link">Каталог</a>
+                    </li>
+                </ul>
+
+                <h1 class="page-title catalog__title">Каталог</h1>
+                <p class="catalog__categories-title a-768">Готовые решения</p>
+                <div class="catalog__content">
+                    <div class="catalog__categories">
+                        <p class="catalog__categories-title">Готовые решения</p>
+
+                        <ul class="catalog__categories-list">
+                            <li class="categories__list-item">
+                                <a href="#!" class="categories__list-link">Гаражи и парковки</a>
+                            </li>
+                            <li class="categories__list-item">
+                                <a href="#!" class="categories__list-link">Тренажерные залы и фитнес-клубы</a>
+                            </li>
+                            <li class="categories__list-item">
+                                <a href="#!" class="categories__list-link">Автосервисы и автомойки</a>
+                            </li>
+                            <li class="categories__list-item">
+                                <a href="#!" class="categories__list-link">Складские и промышленные помещения</a>
+                            </li>
+                            <li class="categories__list-item">
+                                <a href="#!" class="categories__list-link">Модульный пол</a>
+                            </li>
+                            <li class="categories__list-item active-item">
+                                <a href="#!" class="categories__list-link">Смотреть все</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <select name="categories" id="categories-select" class="categories__select">
+                        <option value="">Смотреть все</option>
+                        <option value="garages">
+                            <a href="#!" class="categories__list-link">Гаражи и парковки</a>
+                        </option>
+                        <option value="gyms">
+                            <a href="#!" class="categories__list-link">Тренажерные залы и фитнес-клубы</a>
+                        </option>
+                        <option value="autos">
+                            <a href="#!" class="categories__list-link">Автосервисы и автомойки</a>
+                        </option>
+                        <option value="storages">
+                            <a href="#!" class="categories__list-link">Складские и промышленные помещения</a>
+                        </option>
+                        <option value="module-floor">
+                            <a href="#!" class="categories__list-link">Модульный пол</a>
+                        </option>
+                        
+                    </select>
+                    <div class="catalog__products">
+                        <div class="products__filter">
+                            <div class="products__filter-factura">
+                                <p class="products__filter-title">Фактура:</p>
+
+                                <select name="factura" id="factura-select" class="products__filter-select">
+                                    <option value="">Не выбрано</option>
+                                    <option value="">Не выбрано</option>
+                                    <option value="">Не выбрано</option>
+                                </select>
+                            </div>
+
+                            <button class="products__filter-btn">
+                                <img src="./img/filter-sort-btn.png" alt="" class="filter__btn-img">
+                            </button>
+
+                            <div class="products__filter-sort">
+                                <p class="products__filter-title">Сортировка:</p>
+
+                                <ul class="products__filter-list">
+                                    <li class="filter__list-item active-item">
+                                        <a href="#!" class="filter__list-link">Новинка</a>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <a href="#!" class="filter__list-link">Выгодная цена</a>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <a href="#!" class="filter__list-link">Специальное предложение</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="product__cards">
+                            <div class="product__card">
+                                <div class="product__card-categories">
+                                    <span class="product__category category-hit">Хит продаж</span>
+                                    <span class="product__category category-eco">
+                                        <img src="./img/card_category-eco.png" alt="" class="product__category-img">
+                                    </span>
+                                </div>
+                                <div class="product__card-picture">
+                                    <img src="./img/product-card-1.png" alt="" class="card__picture-img">
+
+                                    <div class="card__picture-colors">
+                                        <span class="card__picture-color color-0B0B0B"></span>
+                                        <span class="card__picture-color color-6D6D6D"></span>
+                                        <span class="card__picture-color color-919191"></span>
+                                        <span class="card__picture-color color-BBBABB"></span>
+                                        <span class="card__picture-color color-4900CF"></span>
+                                        <span class="card__picture-color color-006F00"></span>
+                                        <span class="card__picture-color color-F8E600"></span>
+                                        <span class="card__picture-color color-E80032"></span>
+                                    </div>
+                                </div>
+                                <p class="product__card-title">LT mini silver Coin PVC</p>
+                                <p class="product__card-price">1 330 ₽ /м²</p>
+                                <button type="button" class="product__card-btn">
+                                    <img src="./img/product-card-btn.svg" alt="" class="card__btn-img">
+                                    В корзину
+                                </button>
+                            </div>
+                            <div class="product__card">
+                                <div class="product__card-categories">
+                                    <span class="product__category category-hit">Хит продаж</span>
+                                    <span class="product__category category-eco">
+                                        <img src="./img/card_category-eco.png" alt="" class="product__category-img">
+                                    </span>
+                                </div>
+                                <div class="product__card-picture">
+                                    <img src="./img/product-card-2.png" alt="" class="card__picture-img">
+
+                                    <div class="card__picture-colors">
+                                        <span class="card__picture-color color-0B0B0B"></span>
+                                        <span class="card__picture-color color-6D6D6D"></span>
+                                        <span class="card__picture-color color-919191"></span>
+                                        <span class="card__picture-color color-BBBABB"></span>
+                                        <span class="card__picture-color color-4900CF"></span>
+                                        <span class="card__picture-color color-006F00"></span>
+                                        <span class="card__picture-color color-F8E600"></span>
+                                        <span class="card__picture-color color-E80032"></span>
+                                    </div>
+                                </div>
+                                <p class="product__card-title">LT mini silver Coin PVC</p>
+                                <p class="product__card-price">1 330 ₽ /м²</p>
+                                <button type="button" class="product__card-btn">
+                                    <img src="./img/product-card-btn.svg" alt="" class="card__btn-img">
+                                    В корзину
+                                </button>
+                            </div>
+                            <div class="product__card">
+                                <div class="product__card-categories">
+                                    <span class="product__category category-hit">Хит продаж</span>
+                                    <span class="product__category category-eco">
+                                        <img src="./img/card_category-eco.png" alt="" class="product__category-img">
+                                    </span>
+                                </div>
+                                <div class="product__card-picture">
+                                    <img src="./img/product-card-3.png" alt="" class="card__picture-img">
+
+                                    <div class="card__picture-colors">
+                                        <span class="card__picture-color color-0B0B0B"></span>
+                                        <span class="card__picture-color color-6D6D6D"></span>
+                                        <span class="card__picture-color color-919191"></span>
+                                        <span class="card__picture-color color-BBBABB"></span>
+                                        <span class="card__picture-color color-4900CF"></span>
+                                        <span class="card__picture-color color-006F00"></span>
+                                        <span class="card__picture-color color-F8E600"></span>
+                                        <span class="card__picture-color color-E80032"></span>
+                                    </div>
+                                </div>
+                                <p class="product__card-title">LT mini silver Coin PVC</p>
+                                <p class="product__card-price">1 330 ₽ /м²</p>
+                                <button type="button" class="product__card-btn">
+                                    <img src="./img/product-card-btn.svg" alt="" class="card__btn-img">
+                                    В корзину
+                                </button>
+                            </div>
+                            <div class="product__card">
+                                <div class="product__card-categories">
+                                    <span class="product__category category-hit">Хит продаж</span>
+                                    <span class="product__category category-eco">
+                                        <img src="./img/card_category-eco.png" alt="" class="product__category-img">
+                                    </span>
+                                </div>
+                                <div class="product__card-picture">
+                                    <img src="./img/product-card-1.png" alt="" class="card__picture-img">
+
+                                    <div class="card__picture-colors">
+                                        <span class="card__picture-color color-0B0B0B"></span>
+                                        <span class="card__picture-color color-6D6D6D"></span>
+                                        <span class="card__picture-color color-919191"></span>
+                                        <span class="card__picture-color color-BBBABB"></span>
+                                        <span class="card__picture-color color-4900CF"></span>
+                                        <span class="card__picture-color color-006F00"></span>
+                                        <span class="card__picture-color color-F8E600"></span>
+                                        <span class="card__picture-color color-E80032"></span>
+                                    </div>
+                                </div>
+                                <p class="product__card-title">LT mini silver Coin PVC</p>
+                                <p class="product__card-price">1 330 ₽ /м²</p>
+                                <button type="button" class="product__card-btn">
+                                    <img src="./img/product-card-btn.svg" alt="" class="card__btn-img">
+                                    В корзину
+                                </button>
+                            </div>
+                            <div class="product__card">
+                                <div class="product__card-categories">
+                                    <span class="product__category category-hit">Хит продаж</span>
+                                    <span class="product__category category-eco">
+                                        <img src="./img/card_category-eco.png" alt="" class="product__category-img">
+                                    </span>
+                                </div>
+                                <div class="product__card-picture">
+                                    <img src="./img/product-card-1.png" alt="" class="card__picture-img">
+
+                                    <div class="card__picture-colors">
+                                        <span class="card__picture-color color-0B0B0B"></span>
+                                        <span class="card__picture-color color-6D6D6D"></span>
+                                        <span class="card__picture-color color-919191"></span>
+                                        <span class="card__picture-color color-BBBABB"></span>
+                                        <span class="card__picture-color color-4900CF"></span>
+                                        <span class="card__picture-color color-006F00"></span>
+                                        <span class="card__picture-color color-F8E600"></span>
+                                        <span class="card__picture-color color-E80032"></span>
+                                    </div>
+                                </div>
+                                <p class="product__card-title">LT mini silver Coin PVC</p>
+                                <p class="product__card-price">1 330 ₽ /м²</p>
+                                <button type="button" class="product__card-btn">
+                                    <img src="./img/product-card-btn.svg" alt="" class="card__btn-img">
+                                    В корзину
+                                </button>
+                            </div>
+                            <div class="product__card">
+                                <div class="product__card-categories">
+                                    <span class="product__category category-hit">Хит продаж</span>
+                                    <span class="product__category category-eco">
+                                        <img src="./img/card_category-eco.png" alt="" class="product__category-img">
+                                    </span>
+                                </div>
+                                <div class="product__card-picture">
+                                    <img src="./img/product-card-1.png" alt="" class="card__picture-img">
+
+                                    <div class="card__picture-colors">
+                                        <span class="card__picture-color color-0B0B0B"></span>
+                                        <span class="card__picture-color color-6D6D6D"></span>
+                                        <span class="card__picture-color color-919191"></span>
+                                        <span class="card__picture-color color-BBBABB"></span>
+                                        <span class="card__picture-color color-4900CF"></span>
+                                        <span class="card__picture-color color-006F00"></span>
+                                        <span class="card__picture-color color-F8E600"></span>
+                                        <span class="card__picture-color color-E80032"></span>
+                                    </div>
+                                </div>
+                                <p class="product__card-title">LT mini silver Coin PVC</p>
+                                <p class="product__card-price">1 330 ₽ /м²</p>
+                                <button type="button" class="product__card-btn">
+                                    <img src="./img/product-card-btn.svg" alt="" class="card__btn-img">
+                                    В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer__wrapper">
+                <img class="footer__logo" src="./img/header-logo.png" alt="Логотип">
+
+                <div class="footer__block">
+                    <p class="footer-title">Меню</p>
+                    <nav class="footer__nav">
+                        <ul class="footer__nav-list">
+                            <li class="footer__nav-item">
+                                <a href="./catalog.html" class="footer__nav-link">Каталог продукции</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="./about.html" class="footer__nav-link">О компании</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="./delivery.html" class="footer__nav-link">Доставка и оплата</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="./contacts.html" class="footer__nav-link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer__block">
+                    <p class="footer-title">Контакты</p>
+                    <div class="footer__contacts">
+                        <img src="./img/contacts-tel.png" alt="" class="footer__contacts-img">
+                        <p class="footer__contacts-text">+7 (4812) 250 - 655</p>
+                    </div>
+                    <div class="footer__contacts">
+                        <img src="./img/contacts-map.png" alt="" class="footer__contacts-img">
+                        <p class="footer__contacts-text">Россия, г. Смоленск, Рославльское шоссе, строение 5-й км</p>
+                    </div>
+                </div>
+
+                <div class="footer__block footer__socials">
+                    <a href="#!" class="footer__social-link">
+                        <img src="./img/social-vk.png" alt="" class="footer__social-img">
+                    </a>
+                    <a href="#!" class="footer__social-link">
+                        <img src="./img/social-youtube.png" alt="" class="footer__social-img">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__bottom-text">2023 Selcab Все права защищены</p>
+                <div class="footer__bottom-block">
+                    <a href="#!" class="footer__bottom-text">Пользовательское соглашение</a>
+                    <a href="#!" class="footer__bottom-text">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

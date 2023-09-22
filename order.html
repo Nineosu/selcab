@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СмоленскЭлектроКабель</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="header header-white static-header">
+        <div class="wrapper">
+            <div class="header__wrapper">
+                <div class="header__burger" id="nav-burger">
+                    <span></span>
+                    <span></span>
+                </div>
+                <img class="header__logo" src="./img/header-logo_black.png" alt="Логотип">
+
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item">
+                            <a href="./catalog.html" class="header__nav-link nav-link-more">Каталог продукции</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="./about.html" class="header__nav-link">О компании</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="./delivery.html" class="header__nav-link">Доставка и оплата</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="./contacts.html" class="header__nav-link">Контакты</a>
+                        </li>
+                    </ul>
+
+                    <div class="header__tel">
+                        <img src="./img/header__tel-ico.png" alt="" class="header__tel-ico">
+                        <p class="header__tel-number">+7 (4812) 250 - 655</p>
+                    </div>
+                </nav>
+
+                <div class="header__tel">
+                    <img src="./img/header-black__tel-ico.png" alt="" class="header__tel-ico">
+                    <p class="header__tel-number">+7 (4812) 250 - 655</p>
+                </div>
+
+                <div class="header__links">
+                    <a href="#!" class="header__links-item">
+                        <img src="./img/header-black__links-account.png" alt="" class="header__links-ico">
+                    </a>
+                    <a href="./basket.html" class="header__links-item">
+                        <img src="./img/header__links-cart.svg" alt="" class="header__links-ico">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="basket-main page">
+        <section class="basket">
+            <div class="wrapper">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb__item">
+                        <a href="./index.html" class="breadcrumb__item-link">Главная</a>
+                    </li>
+                    <li class="breadcrumb__item">
+                        <a href="./catalog.html" class="breadcrumb__item-link">Каталог</a>
+                    </li>
+                    <li class="breadcrumb__item breadcrumb-active">
+                        <a href="./basket.html" class="breadcrumb__item-link">Корзина</a>
+                    </li>
+                </ul>
+
+                <h1 class="page-title basket__title">Оформление заказа</h1>
+
+                <div class="basket__content">
+                    <form action="" class="order__form">
+                        <fieldset>
+                            <legend class="form__section-title">Тип плательщика</legend>
+
+                            <div class="order__form-section">
+                                <label class="radio-input">
+                                    <input type="radio" class="form__section-radio" name="payer-type" id="payer-ip">
+                                    <span>Физическое лицо</span>
+                                </label>
+                                <label class="radio-input">
+                                    <input type="radio" class="form__section-radio" name="payer-type" id="payer-lp">
+                                    <span>Юридическое лицо</span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend class="form__section-title legend-required"><sup>*</sup>Регион доставки</legend>
+                            <span class="legend-subtitle">Поле обязательно для заполнения</span>
+
+                            <textarea name="region" id="region-delivery" placeholder="Введите название"></textarea>
+                        </fieldset>
+                        
+                        <fieldset>
+                            <legend class="form__section-title">Доставка</legend>
+
+                            <div class="order__form-section">
+                                <label class="radio-input">
+                                    <input type="radio" class="form__section-radio" name="delivery-type" id="delivery-self">
+                                    <span>Самовывоз</span>
+                                </label>
+                                <label class="radio-input">
+                                    <input type="radio" class="form__section-radio" name="delivery-type" id="delivery-company">
+                                    <span>Доставка транспортной компанией</span>
+                                </label>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend class="form__section-title">Оплата</legend>
+
+                            <div class="order__form-section">
+                                <label class="radio-input">
+                                    <input type="radio" class="form__section-radio" name="payment-type" id="payment-after">
+                                    <span>Оплата после согласования с менеджером</span>
+                                </label>
+                                <label class="radio-input">
+                                    <input type="radio" class="form__section-radio" name="payment-type" id="payment-sbp">
+                                    <span>СБП</span>
+                                    <img src="./img/form-sbp.png" alt="">
+                                </label>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend class="form__section-title">Контактные данные</legend>
+
+                            <label class="text-input">
+                                <p>ФИО</p>
+                                <input type="text" class="order__form-input" name="name" placeholder="Ваше ФИО">
+                            </label>
+                            <label class="text-input">
+                                <p>Телефон</p>
+                                <input type="tel" class="order__form-input" name="tel" placeholder="+7">
+                            </label>
+                            <label class="text-input">
+                                <p>E-mail</p>
+                                <input type="email" class="order__form-input" name="e-mail" placeholder="pochta@mail.ru">
+                            </label>
+                            <label class="text-input">
+                                <p>Комментарий к заказу</p>
+                                <textarea name="commentary" id="commentary" placeholder="Ваш комментарий"></textarea>
+                            </label>
+                        </fieldset>
+
+                        <button type="submit" class="order__form-btn basket__order-link">Заказать</button>
+                    </form>
+
+                    <div class="basket__block">
+                        <div class="basket__order">
+                            <p class="basket__order-title">Сумма заказа</p>
+
+                            <div class="basket__order-info order__info-amount">
+                                <p class="order__info-desc">Кол-во:</p>
+                                <p class="order__info-value">1 шт</p>
+                            </div>
+                            <div class="basket__order-info order__info-discount">
+                                <p class="order__info-desc">Скидка:</p>
+                                <p class="order__info-value">-5%</p>
+                            </div>
+
+                            <div class="basket__order-info basket__order-total">
+                                <p class="order__total-title">Итого:</p>
+                                <p class="order__total-value">1 330 ₽</p>
+                            </div>
+                        </div>
+
+                        <div class="basket__info">
+                            <div class="basket__info-block info__support">
+                                <div class="info__block-text">
+                                    <p class="info__block-title">Нужна помощь?</p>
+                                    <p class="info__block-subtitle">Свяжитесь с менеджером</p>
+                                </div>
+
+                                <a href="#!" class="info__block-link">
+                                    <img src="./img/basket-support-img.svg" alt="" class="info__link-img">
+                                </a>
+                            </div>
+                            <div class="basket__info-block info__delivery">
+                                <div class="info__block-text">
+                                    <p class="info__block-title">Информация о доставке</p>
+                                </div>
+
+                                <a href="#!" class="info__block-link">
+                                    <img src="./img/basket-delivery-img.svg" alt="" class="info__link-img">
+                                </a>
+                            </div>
+                            <div class="basket__info-block">
+                                <div class="info__block-text">
+                                    <p class="info__block-title">Варианты оплаты</p>
+                                    <p class="info__block-subtitle">Оплата юр. лицу по выставленному счету при получении или СБП</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer__wrapper">
+                <img class="footer__logo" src="./img/header-logo.png" alt="Логотип">
+
+                <div class="footer__block">
+                    <p class="footer-title">Меню</p>
+                    <nav class="footer__nav">
+                        <ul class="footer__nav-list">
+                            <li class="footer__nav-item">
+                                <a href="./catalog.html" class="footer__nav-link">Каталог продукции</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="./about.html" class="footer__nav-link">О компании</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="./delivery.html" class="footer__nav-link">Доставка и оплата</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="./contacts.html" class="footer__nav-link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer__block">
+                    <p class="footer-title">Контакты</p>
+                    <div class="footer__contacts">
+                        <img src="./img/contacts-tel.png" alt="" class="footer__contacts-img">
+                        <p class="footer__contacts-text">+7 (4812) 250 - 655</p>
+                    </div>
+                    <div class="footer__contacts">
+                        <img src="./img/contacts-map.png" alt="" class="footer__contacts-img">
+                        <p class="footer__contacts-text">Россия, г. Смоленск, Рославльское шоссе, строение 5-й км</p>
+                    </div>
+                </div>
+
+                <div class="footer__block footer__socials">
+                    <a href="#!" class="footer__social-link">
+                        <img src="./img/social-vk.png" alt="" class="footer__social-img">
+                    </a>
+                    <a href="#!" class="footer__social-link">
+                        <img src="./img/social-youtube.png" alt="" class="footer__social-img">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__bottom-text">2023 Selcab Все права защищены</p>
+                <div class="footer__bottom-block">
+                    <a href="#!" class="footer__bottom-text">Пользовательское соглашение</a>
+                    <a href="#!" class="footer__bottom-text">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
