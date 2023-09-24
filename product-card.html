@@ -17,12 +17,33 @@
                     <span></span>
                     <span></span>
                 </div>
-                <a href="./index.html" class="header__logo-link"><img class="header__logo" src="./img/header-logo.png" alt="Логотип"></a>
+                <a href="./index.html" class="header__logo-link"><img class="header__logo" src="./img/header-logo_black.png" alt="Логотип"></a>
 
                 <nav class="header__nav">
                     <ul class="header__nav-list">
                         <li class="header__nav-item">
-                            <a href="./catalog.html" class="header__nav-link nav-link-more">Каталог продукции</a>
+                            <a href="#!" class="header__nav-link nav-link-more">Каталог продукции</a>
+
+                            <ul class="header__subnav-list">
+                                <li class="header__subnav-item">
+                                    <a href="./catalog.html" class="header__subnav-link">Гаражи и парковки</a>
+                                </li>
+                                <li class="header__subnav-item">
+                                    <a href="./catalog.html" class="header__subnav-link">Тренажерные залы и фитнес-клубы</a>
+                                </li>
+                                <li class="header__subnav-item">
+                                    <a href="./catalog.html" class="header__subnav-link">Автосервисы и автомойки</a>
+                                </li>
+                                <li class="header__subnav-item">
+                                    <a href="./catalog.html" class="header__subnav-link">Складские и промышленные помещения.</a>
+                                </li>
+                                <li class="header__subnav-item">
+                                    <a href="./catalog.html" class="header__subnav-link">Модульный пол</a>
+                                </li>
+                                <li class="header__subnav-item">
+                                    <a href="./catalog.html" class="header__subnav-link">Смотреть все</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="header__nav-item">
                             <a href="./about.html" class="header__nav-link">О компании</a>
@@ -33,12 +54,11 @@
                         <li class="header__nav-item">
                             <a href="./contacts.html" class="header__nav-link">Контакты</a>
                         </li>
+                        <div class="header__tel">
+                            <img src="./img/header__tel-ico.png" alt="" class="header__tel-ico">
+                            <p class="header__tel-number">+7 (4812) 250 - 655</p>
+                        </div>
                     </ul>
-
-                    <div class="header__tel">
-                        <img src="./img/header__tel-ico.png" alt="" class="header__tel-ico">
-                        <p class="header__tel-number">+7 (4812) 250 - 655</p>
-                    </div>
                 </nav>
 
                 <div class="header__tel">
@@ -51,7 +71,7 @@
                         <img src="./img/header-black__links-account.png" alt="" class="header__links-ico">
                     </a>
                     <a href="./basket.html" class="header__links-item">
-                        <img src="./img/header__links-cart.svg" alt="" class="header__links-ico">
+                        <img src="./img/header-black__links-cart.svg" alt="" class="header__links-ico">
                     </a>
                 </div>
             </div>
@@ -70,9 +90,10 @@
                     </li>
                 </ul>
 
-                <div class="product__card-content">
+                <div class="product__card-content product__card">
                     <div class="card__content-bigimg">
-                        <img src="./img/card-content-bigimg.png" alt="" class="card__content-img">
+                        <img src="./img/card-content-bigimg.png" alt="" class="card__content-img card__picture-img color-picked" data-color="#6D6D6D">
+                        <img src="./img/product-card-3.png" alt="" class="card__content-img card__picture-img" data-color="#0B0B0B">
                     </div>
 
                     <div class="card__content-desc">
@@ -91,14 +112,14 @@
                             <div class="card__content-colors">
                                 <p class="card__content-title">Цвета:</p>
                                 <div class="card__picture-colors">
-                                    <span class="card__picture-color color-0B0B0B"></span>
-                                    <span class="card__picture-color color-6D6D6D"></span>
-                                    <span class="card__picture-color color-919191"></span>
-                                    <span class="card__picture-color color-BBBABB"></span>
-                                    <span class="card__picture-color color-4900CF"></span>
-                                    <span class="card__picture-color color-006F00"></span>
-                                    <span class="card__picture-color color-F8E600"></span>
-                                    <span class="card__picture-color color-E80032"></span>
+                                    <span class="card__picture-color" data-color="#0B0B0B"></span>
+                                    <span class="card__picture-color color-picked" data-color="#6D6D6D"></span>
+                                    <span class="card__picture-color" data-color="#919191"></span>
+                                    <span class="card__picture-color" data-color="#BBBABB"></span>
+                                    <span class="card__picture-color" data-color="#4900CF"></span>
+                                    <span class="card__picture-color" data-color="#006F00"></span>
+                                    <span class="card__picture-color" data-color="#F8E600"></span>
+                                    <span class="card__picture-color" data-color="#E80032"></span>
                                 </div>
                             </div>
 
@@ -115,11 +136,11 @@
                             <div class="card__content-counter">
                                 <p class="card__content-title">Кол-во:</p>
                                 <div class="counter">
-                                    <button id="counter-decrement">
+                                    <button class="counter-decrement">
                                         <img src="./img/counter-decrement.svg" alt="" class="counter__decrement-img">
                                     </button>
-                                    <span id="counter-num">1</span>
-                                    <button id="counter-increment">
+                                    <span class="counter-num">1</span>
+                                    <button class="counter-increment">
                                         <img src="./img/counter-increment.svg" alt="" class="counter__increment-img">
                                     </button>
                                 </div>
@@ -210,7 +231,7 @@
             <div class="wrapper">
                 <h3 class="portfolio__title section-title">Примеры проектов</h3>
 
-                <div class="portfolio__slider-btns">
+                <div class="portfolio__slider-btns slider-btns">
                     <div class="swiper-button-prev portfolio-prev"></div>
                     <div class="swiper-button-next portfolio-next"></div>
                 </div>
@@ -280,7 +301,7 @@
     <footer class="footer">
         <div class="wrapper">
             <div class="footer__wrapper">
-                <img class="footer__logo" src="./img/header-logo.png" alt="Логотип">
+                <a href="./index.html" class="header__logo-link"><img class="footer__logo" src="./img/header-logo.png" alt="Логотип"></a>
 
                 <div class="footer__block">
                     <p class="footer-title">Меню</p>

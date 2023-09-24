@@ -22,7 +22,28 @@
                 <nav class="header__nav">
                     <ul class="header__nav-list">
                         <li class="header__nav-item">
-                            <a href="./catalog.html" class="header__nav-link nav-link-more">Каталог продукции</a>
+                            <a href="#!" class="header__nav-link nav-link-more">Каталог продукции</a>
+
+                            <ul class="header__subnav-list">
+                                <li class="header__subnav-item">
+                                    <a href="./catalog.html" class="header__subnav-link">Гаражи и парковки</a>
+                                </li>
+                                <li class="header__subnav-item">
+                                    <a href="./catalog.html" class="header__subnav-link">Тренажерные залы и фитнес-клубы</a>
+                                </li>
+                                <li class="header__subnav-item">
+                                    <a href="./catalog.html" class="header__subnav-link">Автосервисы и автомойки</a>
+                                </li>
+                                <li class="header__subnav-item">
+                                    <a href="./catalog.html" class="header__subnav-link">Складские и промышленные помещения.</a>
+                                </li>
+                                <li class="header__subnav-item">
+                                    <a href="./catalog.html" class="header__subnav-link">Модульный пол</a>
+                                </li>
+                                <li class="header__subnav-item">
+                                    <a href="./catalog.html" class="header__subnav-link">Смотреть все</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="header__nav-item">
                             <a href="./about.html" class="header__nav-link">О компании</a>
@@ -33,12 +54,11 @@
                         <li class="header__nav-item">
                             <a href="./contacts.html" class="header__nav-link">Контакты</a>
                         </li>
+                        <div class="header__tel">
+                            <img src="./img/header__tel-ico.png" alt="" class="header__tel-ico">
+                            <p class="header__tel-number">+7 (4812) 250 - 655</p>
+                        </div>
                     </ul>
-
-                    <div class="header__tel">
-                        <img src="./img/header__tel-ico.png" alt="" class="header__tel-ico">
-                        <p class="header__tel-number">+7 (4812) 250 - 655</p>
-                    </div>
                 </nav>
 
                 <div class="header__tel">
@@ -122,9 +142,9 @@
                                 <p class="products__filter-title">Фактура:</p>
 
                                 <select name="factura" id="factura-select" class="products__filter-select">
-                                    <option value="">Не выбрано</option>
-                                    <option value="">Не выбрано</option>
-                                    <option value="">Не выбрано</option>
+                                    <option value="Diamond">Diamond (Металл)</option>
+                                    <option value="Coin">Coin (Монетка)</option>
+                                    <option value="Leather">Leather (Шагрень</option>
                                 </select>
                             </div>
 
@@ -149,7 +169,7 @@
                             </div>
                         </div>
                         <div class="product__cards">
-                            <div class="product__card">
+                            <div class="product__card ">
                                 <div class="product__card-categories">
                                     <span class="product__category category-hit">Хит продаж</span>
                                     <span class="product__category category-eco">
@@ -157,20 +177,22 @@
                                     </span>
                                 </div>
                                 <div class="product__card-picture">
-                                    <img src="./img/product-card-1.png" alt="" class="card__picture-img">
+                                    <img src="./img/product-card-1.png" alt="" class="card__picture-img" data-color="#6D6D6D">
+                                    <img src="./img/product-card-2.png" alt="" class="card__picture-img" data-color="#E80032">
+                                    <img src="./img/product-card-3.png" alt="" class="card__picture-img color-picked" data-color="#0B0B0B">
 
                                     <div class="card__picture-colors">
-                                        <span class="card__picture-color color-0B0B0B"></span>
-                                        <span class="card__picture-color color-6D6D6D"></span>
-                                        <span class="card__picture-color color-919191"></span>
-                                        <span class="card__picture-color color-BBBABB"></span>
-                                        <span class="card__picture-color color-4900CF"></span>
-                                        <span class="card__picture-color color-006F00"></span>
-                                        <span class="card__picture-color color-F8E600"></span>
-                                        <span class="card__picture-color color-E80032"></span>
+                                        <span class="card__picture-color color-picked" data-color="#0B0B0B"></span>
+                                        <span class="card__picture-color" data-color="#6D6D6D"></span>
+                                        <span class="card__picture-color" data-color="#919191"></span>
+                                        <span class="card__picture-color" data-color="#BBBABB"></span>
+                                        <span class="card__picture-color" data-color="#4900CF"></span>
+                                        <span class="card__picture-color" data-color="#006F00"></span>
+                                        <span class="card__picture-color" data-color="#F8E600"></span>
+                                        <span class="card__picture-color" data-color="#E80032"></span>
                                     </div>
                                 </div>
-                                <p class="product__card-title">LT mini silver Coin PVC</p>
+                                <a href="./product-card.html" class="product__card-title">LT mini silver Coin PVC</a>
                                 <p class="product__card-price">1 330 ₽ /м²</p>
                                 <button type="button" class="product__card-btn">
                                     <img src="./img/product-card-btn.svg" alt="" class="card__btn-img">
@@ -185,20 +207,22 @@
                                     </span>
                                 </div>
                                 <div class="product__card-picture">
-                                    <img src="./img/product-card-2.png" alt="" class="card__picture-img">
+                                    <img src="./img/product-card-1.png" alt="" class="card__picture-img" data-color="#6D6D6D">
+                                    <img src="./img/product-card-2.png" alt="" class="card__picture-img color-picked" data-color="#E80032">
+                                    <img src="./img/product-card-3.png" alt="" class="card__picture-img" data-color="#0B0B0B">
 
                                     <div class="card__picture-colors">
-                                        <span class="card__picture-color color-0B0B0B"></span>
-                                        <span class="card__picture-color color-6D6D6D"></span>
-                                        <span class="card__picture-color color-919191"></span>
-                                        <span class="card__picture-color color-BBBABB"></span>
-                                        <span class="card__picture-color color-4900CF"></span>
-                                        <span class="card__picture-color color-006F00"></span>
-                                        <span class="card__picture-color color-F8E600"></span>
-                                        <span class="card__picture-color color-E80032"></span>
+                                        <span class="card__picture-color" data-color="#0B0B0B"></span>
+                                        <span class="card__picture-color" data-color="#6D6D6D"></span>
+                                        <span class="card__picture-color" data-color="#919191"></span>
+                                        <span class="card__picture-color" data-color="#BBBABB"></span>
+                                        <span class="card__picture-color" data-color="#4900CF"></span>
+                                        <span class="card__picture-color" data-color="#006F00"></span>
+                                        <span class="card__picture-color" data-color="#F8E600"></span>
+                                        <span class="card__picture-color" data-color="#E80032"></span>
                                     </div>
                                 </div>
-                                <p class="product__card-title">LT mini silver Coin PVC</p>
+                                <a href="#!" class="product__card-title">LT mini silver Coin PVC</a>
                                 <p class="product__card-price">1 330 ₽ /м²</p>
                                 <button type="button" class="product__card-btn">
                                     <img src="./img/product-card-btn.svg" alt="" class="card__btn-img">
@@ -213,20 +237,22 @@
                                     </span>
                                 </div>
                                 <div class="product__card-picture">
-                                    <img src="./img/product-card-3.png" alt="" class="card__picture-img">
+                                    <img src="./img/product-card-1.png" alt="" class="card__picture-img color-picked" data-color="#6D6D6D">
+                                    <img src="./img/product-card-2.png" alt="" class="card__picture-img" data-color="#E80032">
+                                    <img src="./img/product-card-3.png" alt="" class="card__picture-img" data-color="#0B0B0B">
 
                                     <div class="card__picture-colors">
-                                        <span class="card__picture-color color-0B0B0B"></span>
-                                        <span class="card__picture-color color-6D6D6D"></span>
-                                        <span class="card__picture-color color-919191"></span>
-                                        <span class="card__picture-color color-BBBABB"></span>
-                                        <span class="card__picture-color color-4900CF"></span>
-                                        <span class="card__picture-color color-006F00"></span>
-                                        <span class="card__picture-color color-F8E600"></span>
-                                        <span class="card__picture-color color-E80032"></span>
+                                        <span class="card__picture-color" data-color="#0B0B0B"></span>
+                                        <span class="card__picture-color" data-color="#6D6D6D"></span>
+                                        <span class="card__picture-color" data-color="#919191"></span>
+                                        <span class="card__picture-color" data-color="#BBBABB"></span>
+                                        <span class="card__picture-color" data-color="#4900CF"></span>
+                                        <span class="card__picture-color" data-color="#006F00"></span>
+                                        <span class="card__picture-color" data-color="#F8E600"></span>
+                                        <span class="card__picture-color" data-color="#E80032"></span>
                                     </div>
                                 </div>
-                                <p class="product__card-title">LT mini silver Coin PVC</p>
+                                <a href="#!" class="product__card-title">LT mini silver Coin PVC</a>
                                 <p class="product__card-price">1 330 ₽ /м²</p>
                                 <button type="button" class="product__card-btn">
                                     <img src="./img/product-card-btn.svg" alt="" class="card__btn-img">
@@ -241,20 +267,22 @@
                                     </span>
                                 </div>
                                 <div class="product__card-picture">
-                                    <img src="./img/product-card-1.png" alt="" class="card__picture-img">
+                                    <img src="./img/product-card-1.png" alt="" class="card__picture-img color-picked" data-color="#6D6D6D">
+                                    <img src="./img/product-card-2.png" alt="" class="card__picture-img" data-color="#E80032">
+                                    <img src="./img/product-card-3.png" alt="" class="card__picture-img" data-color="#0B0B0B">
 
                                     <div class="card__picture-colors">
-                                        <span class="card__picture-color color-0B0B0B"></span>
-                                        <span class="card__picture-color color-6D6D6D"></span>
-                                        <span class="card__picture-color color-919191"></span>
-                                        <span class="card__picture-color color-BBBABB"></span>
-                                        <span class="card__picture-color color-4900CF"></span>
-                                        <span class="card__picture-color color-006F00"></span>
-                                        <span class="card__picture-color color-F8E600"></span>
-                                        <span class="card__picture-color color-E80032"></span>
+                                        <span class="card__picture-color" data-color="#0B0B0B"></span>
+                                        <span class="card__picture-color" data-color="#6D6D6D"></span>
+                                        <span class="card__picture-color" data-color="#919191"></span>
+                                        <span class="card__picture-color" data-color="#BBBABB"></span>
+                                        <span class="card__picture-color" data-color="#4900CF"></span>
+                                        <span class="card__picture-color" data-color="#006F00"></span>
+                                        <span class="card__picture-color" data-color="#F8E600"></span>
+                                        <span class="card__picture-color" data-color="#E80032"></span>
                                     </div>
                                 </div>
-                                <p class="product__card-title">LT mini silver Coin PVC</p>
+                                <a href="#!" class="product__card-title">LT mini silver Coin PVC</a>
                                 <p class="product__card-price">1 330 ₽ /м²</p>
                                 <button type="button" class="product__card-btn">
                                     <img src="./img/product-card-btn.svg" alt="" class="card__btn-img">
@@ -269,20 +297,22 @@
                                     </span>
                                 </div>
                                 <div class="product__card-picture">
-                                    <img src="./img/product-card-1.png" alt="" class="card__picture-img">
+                                    <img src="./img/product-card-1.png" alt="" class="card__picture-img color-picked" data-color="#6D6D6D">
+                                    <img src="./img/product-card-2.png" alt="" class="card__picture-img" data-color="#E80032">
+                                    <img src="./img/product-card-3.png" alt="" class="card__picture-img" data-color="#0B0B0B">
 
                                     <div class="card__picture-colors">
-                                        <span class="card__picture-color color-0B0B0B"></span>
-                                        <span class="card__picture-color color-6D6D6D"></span>
-                                        <span class="card__picture-color color-919191"></span>
-                                        <span class="card__picture-color color-BBBABB"></span>
-                                        <span class="card__picture-color color-4900CF"></span>
-                                        <span class="card__picture-color color-006F00"></span>
-                                        <span class="card__picture-color color-F8E600"></span>
-                                        <span class="card__picture-color color-E80032"></span>
+                                        <span class="card__picture-color" data-color="#0B0B0B"></span>
+                                        <span class="card__picture-color" data-color="#6D6D6D"></span>
+                                        <span class="card__picture-color" data-color="#919191"></span>
+                                        <span class="card__picture-color" data-color="#BBBABB"></span>
+                                        <span class="card__picture-color" data-color="#4900CF"></span>
+                                        <span class="card__picture-color" data-color="#006F00"></span>
+                                        <span class="card__picture-color" data-color="#F8E600"></span>
+                                        <span class="card__picture-color" data-color="#E80032"></span>
                                     </div>
                                 </div>
-                                <p class="product__card-title">LT mini silver Coin PVC</p>
+                                <a href="#!" class="product__card-title">LT mini silver Coin PVC</a>
                                 <p class="product__card-price">1 330 ₽ /м²</p>
                                 <button type="button" class="product__card-btn">
                                     <img src="./img/product-card-btn.svg" alt="" class="card__btn-img">
@@ -297,20 +327,22 @@
                                     </span>
                                 </div>
                                 <div class="product__card-picture">
-                                    <img src="./img/product-card-1.png" alt="" class="card__picture-img">
+                                    <img src="./img/product-card-1.png" alt="" class="card__picture-img color-picked" data-color="#6D6D6D">
+                                    <img src="./img/product-card-2.png" alt="" class="card__picture-img" data-color="#E80032">
+                                    <img src="./img/product-card-3.png" alt="" class="card__picture-img" data-color="#0B0B0B">
 
                                     <div class="card__picture-colors">
-                                        <span class="card__picture-color color-0B0B0B"></span>
-                                        <span class="card__picture-color color-6D6D6D"></span>
-                                        <span class="card__picture-color color-919191"></span>
-                                        <span class="card__picture-color color-BBBABB"></span>
-                                        <span class="card__picture-color color-4900CF"></span>
-                                        <span class="card__picture-color color-006F00"></span>
-                                        <span class="card__picture-color color-F8E600"></span>
-                                        <span class="card__picture-color color-E80032"></span>
+                                        <span class="card__picture-color" data-color="#0B0B0B"></span>
+                                        <span class="card__picture-color" data-color="#6D6D6D"></span>
+                                        <span class="card__picture-color" data-color="#919191"></span>
+                                        <span class="card__picture-color" data-color="#BBBABB"></span>
+                                        <span class="card__picture-color" data-color="#4900CF"></span>
+                                        <span class="card__picture-color" data-color="#006F00"></span>
+                                        <span class="card__picture-color" data-color="#F8E600"></span>
+                                        <span class="card__picture-color" data-color="#E80032"></span>
                                     </div>
                                 </div>
-                                <p class="product__card-title">LT mini silver Coin PVC</p>
+                                <a href="#!" class="product__card-title">LT mini silver Coin PVC</a>
                                 <p class="product__card-price">1 330 ₽ /м²</p>
                                 <button type="button" class="product__card-btn">
                                     <img src="./img/product-card-btn.svg" alt="" class="card__btn-img">
@@ -327,7 +359,7 @@
     <footer class="footer">
         <div class="wrapper">
             <div class="footer__wrapper">
-                <img class="footer__logo" src="./img/header-logo.png" alt="Логотип">
+                <a href="./index.html" class="header__logo-link"><img class="footer__logo" src="./img/header-logo.png" alt="Логотип"></a>
 
                 <div class="footer__block">
                     <p class="footer-title">Меню</p>
