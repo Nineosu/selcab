@@ -1175,6 +1175,9 @@ span.card__picture-color:hover {
     font-size: 16px;
     line-height: 20px;
 }
+.btn-active {
+    background: #00DCC4;
+}
 
 .card__picture-img {
     display: none;

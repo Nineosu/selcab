@@ -217,9 +217,29 @@ window.addEventListener('DOMContentLoaded', () => {
     
         const sortBtn = document.querySelector('.products__filter-btn'),
           productsSort = document.querySelector('.products__filter-sort');
-    
-        sortBtn.addEventListener('click', () => {
-            productsSort.classList.toggle('sort-active');
+
+        if (sortBtn) {
+            sortBtn.addEventListener('click', () => {
+                productsSort.classList.toggle('sort-active');
+            });
+        }
+
+        const productCardBtns = document.querySelectorAll('.product__card-btn');
+
+        const inCard = 'В корзине',
+              notInCard = 'В корзину'
+
+        productCardBtns.forEach(btn => {
+            let btnText = btn.querySelector('span');
+            btn.addEventListener('click', () => {
+                if (!btn.classList.contains('btn-active')) {
+                    btn.classList.add('btn-active')
+                    btnText.textContent = inCard;
+                } else {
+                    btn.classList.remove('btn-active')
+                    btnText.textContent = notInCard;
+                }
+            });
         });
     }
     
