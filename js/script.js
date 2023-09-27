@@ -41,8 +41,14 @@ window.addEventListener('DOMContentLoaded', () => {
         direction: 'horizontal',
         loop: false,
         centeredSlides: true,
-        slidesPerView: 3,
-        spaceBetween: 20,
+        slidesPerView: 1.5,
+        spaceBetween: 0,
+
+        breakpoints: {
+            768: {
+                slidesPerView: 3
+            }
+        },
       
         // Navigation arrows
         navigation: {
@@ -219,20 +225,22 @@ window.addEventListener('DOMContentLoaded', () => {
     
     // Yandex map
     
-    ymaps.ready(init);
-    function init(){
-        var map = new ymaps.Map("scheme-map", {
-            center: [55.76, 37.64],
-            zoom: 7
-        });
-
-        map.controls.remove('geolocationControl'); // удаляем геолокацию
-        map.controls.remove('searchControl'); // удаляем поиск
-        map.controls.remove('trafficControl'); // удаляем контроль трафика
-        map.controls.remove('typeSelector'); // удаляем тип
-        map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
-        // map.controls.remove('zoomControl'); // удаляем контрол зуммирования
-        map.controls.remove('rulerControl'); // удаляем контрол правил
-        map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+    if (document.querySelector('#scheme-map')) {
+        ymaps.ready(init);
+        function init(){
+            var map = new ymaps.Map("scheme-map", {
+                center: [55.76, 37.64],
+                zoom: 7
+            });
+    
+            map.controls.remove('geolocationControl'); // удаляем геолокацию
+            map.controls.remove('searchControl'); // удаляем поиск
+            map.controls.remove('trafficControl'); // удаляем контроль трафика
+            map.controls.remove('typeSelector'); // удаляем тип
+            map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+            // map.controls.remove('zoomControl'); // удаляем контрол зуммирования
+            map.controls.remove('rulerControl'); // удаляем контрол правил
+            map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+        }   
     }
 });

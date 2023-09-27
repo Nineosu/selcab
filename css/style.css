@@ -1271,15 +1271,34 @@ span.color-picked {
 }
 
 .card__content-bottom {
-    display: flex;
+    display: grid;
+    grid-template-areas: 'counter counter'
+                          'price btn';
     align-items: center;
+    max-width: 550px;
     gap: 60px;
+}
+
+.card__content-counter {
+    grid-area: counter;
+}
+
+.card__price {
+    grid-area: price;
 }
 
 .card__content-price {
     font-weight: 700;
     font-size: 30px;
     line-height: 37px;
+}
+
+.card__price .card__content-title {
+    display: none;
+}
+
+.content__desc .product__card-btn {
+    grid-area: btn;
 }
 
 .product__card-chars {
@@ -2631,7 +2650,7 @@ a.footer__bottom-text {
         margin-bottom: 50px;
     }
     .portfolio__slider-btns {
-        top: 80%;
+        top: 82%;
         left: 50%;
         transform: translateX(-50%);
         right: unset;
@@ -2715,6 +2734,39 @@ a.footer__bottom-text {
         margin: 0 auto;
     }
 
+    .main-faq {
+        padding: 30px 0;
+    }
+
+    .product__card-content {
+        grid-template-columns: 1fr;
+    }
+    .card__content-bigimg {
+        margin: 0 auto;
+    }
+    .card__content-desc {
+        text-align: left;
+    }
+    .content__factures {
+        flex-wrap: wrap;
+    }
+    .card__content-bottom {
+        grid-template-areas: 'price counter'
+                              'btn btn';
+    }
+    .card__content-bottom .product__card-btn {
+        max-width: 100%;
+    }
+    .card__price .card__content-title {
+        display: block;
+    }
+    .card__chars-list {
+        grid-template-columns: 1fr;
+    }
+    .chars__list-item {
+        grid-template-columns: 1fr 1fr;
+    }
+
     .page .intro-bunner {
         padding-top: 100px;
         margin-bottom: 30px;
@@ -2750,6 +2802,9 @@ a.footer__bottom-text {
         top: 110%;
         left: 50%;
         transform: translateX(-50%);
+    }
+    .contacts-team .slider-btns {
+        top: 100%;
     }
     .work__card-title {
         max-width: 150px;
