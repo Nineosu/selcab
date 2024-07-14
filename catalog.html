@@ -67,11 +67,11 @@
                 </div>
 
                 <div class="header__links">
-                    <a href="#!" class="header__links-item">
-                        <img src="./img/header-black__links-account.png" alt="" class="header__links-ico">
+                    <a href="#!" class="header__links-item modal-btn" data-modal="account-login">
+                        <img src="./img/header__links-account.svg" alt="" class="header__links-ico">
                     </a>
                     <a href="./basket.html" class="header__links-item">
-                        <img src="./img/header-black__links-cart.svg" alt="" class="header__links-ico">
+                        <img src="./img/header__links-cart.svg" alt="" class="header__links-ico">
                     </a>
                 </div>
             </div>
@@ -89,6 +89,63 @@
                         <a href="./catalog.html" class="breadcrumb__item-link">Каталог</a>
                     </li>
                 </ul>
+
+                <section class="examples-bunner">
+                    <div class="account__bunner">
+                        <p class="account__bunner-title">Примеры проектов</p>
+        
+                        <div class="swiper portfolio-slider account-slider">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide account-slide">
+                                <div class="account-slide__text">
+                                    <p class="account-slide__title">Гараж</p>
+                                    <div class="account-slide__subtext">
+                                        <p class="account-slide__subtitle">Площадь: <span>33м²</span></p>
+                                        <p class="account-slide__subtitle">Цена: <span>164 490₽</span></p>
+                                    </div>
+                                </div>
+    
+                                <img src="./img/portfolio-1.png" alt="" class="account__slide-img">
+                              </div>
+                              <div class="swiper-slide account-slide">
+                                <div class="account-slide__text">
+                                    <p class="account-slide__title">Гараж</p>
+                                    <div class="account-slide__subtext">
+                                        <p class="account-slide__subtitle">Площадь: <span>33м²</span></p>
+                                        <p class="account-slide__subtitle">Цена: <span>164 490₽</span></p>
+                                    </div>
+                                </div>
+    
+                                <img src="./img/portfolio-2.jpg" alt="" class="account__slide-img">
+                              </div>
+                              <div class="swiper-slide account-slide">
+                                <div class="account-slide__text">
+                                    <p class="account-slide__title">Гараж</p>
+                                    <div class="account-slide__subtext">
+                                        <p class="account-slide__subtitle">Площадь: <span>33м²</span></p>
+                                        <p class="account-slide__subtitle">Цена: <span>164 490₽</span></p>
+                                    </div>
+                                </div>
+    
+                                <img src="./img/portfolio-3.png" alt="" class="account__slide-img">
+                              </div>
+                              <div class="swiper-slide account-slide">
+                                <div class="account-slide__text">
+                                    <p class="account-slide__title">Гараж</p>
+                                    <div class="account-slide__subtext">
+                                        <p class="account-slide__subtitle">Площадь: <span>33м²</span></p>
+                                        <p class="account-slide__subtitle">Цена: <span>164 490₽</span></p>
+                                    </div>
+                                </div>
+    
+                                <img src="./img/portfolio-1.png" alt="" class="account__slide-img">
+                              </div>
+                            </div>
+                            <div class="swiper-button-prev account-prev"></div>
+                            <div class="swiper-button-next account-next"></div>
+                        </div>
+                    </div>
+                </section>
 
                 <h1 class="page-title catalog__title">Каталог</h1>
                 <p class="catalog__categories-title a-768">Готовые решения</p>
@@ -169,14 +226,14 @@
                             </div>
                         </div>
                         <div class="product__cards">
-                            <div class="product__card ">
-                                <div class="product__card-categories">
-                                    <span class="product__category category-hit">Хит продаж</span>
-                                    <span class="product__category category-eco">
-                                        <img src="./img/card_category-eco.png" alt="" class="product__category-img">
-                                    </span>
-                                </div>
+                            <div class="product__card">
                                 <div class="product__card-picture">
+                                    <div class="product__card-categories">
+                                        <span class="product__category category-hit"><img src="./img/category-hit.svg" alt=""></span>
+                                        <span class="product__category category-eco">
+                                            <img src="./img/category-eco.svg" alt="" class="product__category-img">
+                                        </span>
+                                    </div>
                                     <img src="./img/product-card-1.png" alt="" class="card__picture-img" data-color="#6D6D6D">
                                     <img src="./img/product-card-2.png" alt="" class="card__picture-img" data-color="#E80032">
                                     <img src="./img/product-card-3.png" alt="" class="card__picture-img color-picked" data-color="#0B0B0B">
@@ -192,7 +249,13 @@
                                         <span class="card__picture-color" data-color="#E80032"></span>
                                     </div>
                                 </div>
-                                <a href="./product-card.html" class="product__card-title">LT mini silver Coin PVC</a>
+                                <div class="product__card-title-block">
+                                    <a href="./product-card.html" class="product__card-title">LT mini silver Coin PVC Eco</a>
+
+                                    <button class="product__card-favourite-btn">
+                                        <img src="./img/product-card-favourite.svg" alt="">
+                                    </button>
+                                </div>
                                 <p class="product__card-price">1 330 ₽ /м²</p>
                                 <button type="button" class="product__card-btn">
                                     <img src="./img/product-card-btn.svg" alt="" class="card__btn-img">
@@ -200,19 +263,51 @@
                                 </button>
                             </div>
                             <div class="product__card">
-                                <div class="product__card-categories">
-                                    <span class="product__category category-hit">Хит продаж</span>
-                                    <span class="product__category category-eco">
-                                        <img src="./img/card_category-eco.png" alt="" class="product__category-img">
-                                    </span>
-                                </div>
                                 <div class="product__card-picture">
+                                    <div class="product__card-categories">
+                                    </div>
+                                    <img src="./img/product-card-1.png" alt="" class="card__picture-img color-picked" data-color="#6D6D6D">
+                                    <img src="./img/product-card-2.png" alt="" class="card__picture-img" data-color="#E80032">
+                                    <img src="./img/product-card-3.png" alt="" class="card__picture-img" data-color="#0B0B0B">
+
+                                    <div class="card__picture-colors">
+                                        <span class="card__picture-color" data-color="#0B0B0B"></span>
+                                        <span class="card__picture-color color-picked" data-color="#6D6D6D"></span>
+                                        <span class="card__picture-color" data-color="#919191"></span>
+                                        <span class="card__picture-color" data-color="#BBBABB"></span>
+                                        <span class="card__picture-color" data-color="#4900CF"></span>
+                                        <span class="card__picture-color" data-color="#006F00"></span>
+                                        <span class="card__picture-color" data-color="#F8E600"></span>
+                                        <span class="card__picture-color" data-color="#E80032"></span>
+                                    </div>
+                                </div>
+                                <div class="product__card-title-block">
+                                    <a href="./product-card.html" class="product__card-title">LT mini silver Coin PVC</a>
+
+                                    <button class="product__card-favourite-btn">
+                                        <img src="./img/product-card-favourite.svg" alt="">
+                                    </button>
+                                </div>
+                                <p class="product__card-price">1 330 ₽ /м²</p>
+                                <button type="button" class="product__card-btn">
+                                    <img src="./img/product-card-btn.svg" alt="" class="card__btn-img">
+                                    <span>В корзину</span>
+                                </button>
+                            </div>
+                            <div class="product__card">
+                                <div class="product__card-picture">
+                                    <div class="product__card-categories">
+                                        <span class="product__category category-hit"><img src="./img/category-hit.svg" alt=""></span>
+                                        <span class="product__category category-eco">
+                                            <img src="./img/category-eco.svg" alt="" class="product__category-img">
+                                        </span>
+                                    </div>
                                     <img src="./img/product-card-1.png" alt="" class="card__picture-img" data-color="#6D6D6D">
-                                    <img src="./img/product-card-2.png" alt="" class="card__picture-img color-picked" data-color="#E80032">
-                                    <img src="./img/product-card-3.png" alt="" class="card__picture-img" data-color="#0B0B0B">
+                                    <img src="./img/product-card-2.png" alt="" class="card__picture-img" data-color="#E80032">
+                                    <img src="./img/product-card-3.png" alt="" class="card__picture-img color-picked" data-color="#0B0B0B">
 
                                     <div class="card__picture-colors">
-                                        <span class="card__picture-color" data-color="#0B0B0B"></span>
+                                        <span class="card__picture-color color-picked" data-color="#0B0B0B"></span>
                                         <span class="card__picture-color" data-color="#6D6D6D"></span>
                                         <span class="card__picture-color" data-color="#919191"></span>
                                         <span class="card__picture-color" data-color="#BBBABB"></span>
@@ -222,7 +317,13 @@
                                         <span class="card__picture-color" data-color="#E80032"></span>
                                     </div>
                                 </div>
-                                <a href="#!" class="product__card-title">LT mini silver Coin PVC</a>
+                                <div class="product__card-title-block">
+                                    <a href="./product-card.html" class="product__card-title">LT mini silver Coin PVC Eco</a>
+
+                                    <button class="product__card-favourite-btn">
+                                        <img src="./img/product-card-favourite.svg" alt="">
+                                    </button>
+                                </div>
                                 <p class="product__card-price">1 330 ₽ /м²</p>
                                 <button type="button" class="product__card-btn">
                                     <img src="./img/product-card-btn.svg" alt="" class="card__btn-img">
@@ -230,19 +331,19 @@
                                 </button>
                             </div>
                             <div class="product__card">
-                                <div class="product__card-categories">
-                                    <span class="product__category category-hit">Хит продаж</span>
-                                    <span class="product__category category-eco">
-                                        <img src="./img/card_category-eco.png" alt="" class="product__category-img">
-                                    </span>
-                                </div>
                                 <div class="product__card-picture">
-                                    <img src="./img/product-card-1.png" alt="" class="card__picture-img color-picked" data-color="#6D6D6D">
+                                    <div class="product__card-categories">
+                                        <span class="product__category category-hit"><img src="./img/category-hit.svg" alt=""></span>
+                                        <span class="product__category category-eco">
+                                            <img src="./img/category-eco.svg" alt="" class="product__category-img">
+                                        </span>
+                                    </div>
+                                    <img src="./img/product-card-1.png" alt="" class="card__picture-img" data-color="#6D6D6D">
                                     <img src="./img/product-card-2.png" alt="" class="card__picture-img" data-color="#E80032">
-                                    <img src="./img/product-card-3.png" alt="" class="card__picture-img" data-color="#0B0B0B">
+                                    <img src="./img/product-card-3.png" alt="" class="card__picture-img color-picked" data-color="#0B0B0B">
 
                                     <div class="card__picture-colors">
-                                        <span class="card__picture-color" data-color="#0B0B0B"></span>
+                                        <span class="card__picture-color color-picked" data-color="#0B0B0B"></span>
                                         <span class="card__picture-color" data-color="#6D6D6D"></span>
                                         <span class="card__picture-color" data-color="#919191"></span>
                                         <span class="card__picture-color" data-color="#BBBABB"></span>
@@ -252,7 +353,13 @@
                                         <span class="card__picture-color" data-color="#E80032"></span>
                                     </div>
                                 </div>
-                                <a href="#!" class="product__card-title">LT mini silver Coin PVC</a>
+                                <div class="product__card-title-block">
+                                    <a href="./product-card.html" class="product__card-title">LT mini silver Coin PVC Eco</a>
+
+                                    <button class="product__card-favourite-btn">
+                                        <img src="./img/product-card-favourite.svg" alt="">
+                                    </button>
+                                </div>
                                 <p class="product__card-price">1 330 ₽ /м²</p>
                                 <button type="button" class="product__card-btn">
                                     <img src="./img/product-card-btn.svg" alt="" class="card__btn-img">
@@ -260,19 +367,19 @@
                                 </button>
                             </div>
                             <div class="product__card">
-                                <div class="product__card-categories">
-                                    <span class="product__category category-hit">Хит продаж</span>
-                                    <span class="product__category category-eco">
-                                        <img src="./img/card_category-eco.png" alt="" class="product__category-img">
-                                    </span>
-                                </div>
                                 <div class="product__card-picture">
-                                    <img src="./img/product-card-1.png" alt="" class="card__picture-img color-picked" data-color="#6D6D6D">
+                                    <div class="product__card-categories">
+                                        <span class="product__category category-hit"><img src="./img/category-hit.svg" alt=""></span>
+                                        <span class="product__category category-eco">
+                                            <img src="./img/category-eco.svg" alt="" class="product__category-img">
+                                        </span>
+                                    </div>
+                                    <img src="./img/product-card-1.png" alt="" class="card__picture-img" data-color="#6D6D6D">
                                     <img src="./img/product-card-2.png" alt="" class="card__picture-img" data-color="#E80032">
-                                    <img src="./img/product-card-3.png" alt="" class="card__picture-img" data-color="#0B0B0B">
+                                    <img src="./img/product-card-3.png" alt="" class="card__picture-img color-picked" data-color="#0B0B0B">
 
                                     <div class="card__picture-colors">
-                                        <span class="card__picture-color" data-color="#0B0B0B"></span>
+                                        <span class="card__picture-color color-picked" data-color="#0B0B0B"></span>
                                         <span class="card__picture-color" data-color="#6D6D6D"></span>
                                         <span class="card__picture-color" data-color="#919191"></span>
                                         <span class="card__picture-color" data-color="#BBBABB"></span>
@@ -282,7 +389,13 @@
                                         <span class="card__picture-color" data-color="#E80032"></span>
                                     </div>
                                 </div>
-                                <a href="#!" class="product__card-title">LT mini silver Coin PVC</a>
+                                <div class="product__card-title-block">
+                                    <a href="./product-card.html" class="product__card-title">LT mini silver Coin PVC Eco</a>
+
+                                    <button class="product__card-favourite-btn">
+                                        <img src="./img/product-card-favourite.svg" alt="">
+                                    </button>
+                                </div>
                                 <p class="product__card-price">1 330 ₽ /м²</p>
                                 <button type="button" class="product__card-btn">
                                     <img src="./img/product-card-btn.svg" alt="" class="card__btn-img">
@@ -290,19 +403,19 @@
                                 </button>
                             </div>
                             <div class="product__card">
-                                <div class="product__card-categories">
-                                    <span class="product__category category-hit">Хит продаж</span>
-                                    <span class="product__category category-eco">
-                                        <img src="./img/card_category-eco.png" alt="" class="product__category-img">
-                                    </span>
-                                </div>
                                 <div class="product__card-picture">
-                                    <img src="./img/product-card-1.png" alt="" class="card__picture-img color-picked" data-color="#6D6D6D">
+                                    <div class="product__card-categories">
+                                        <span class="product__category category-hit"><img src="./img/category-hit.svg" alt=""></span>
+                                        <span class="product__category category-eco">
+                                            <img src="./img/category-eco.svg" alt="" class="product__category-img">
+                                        </span>
+                                    </div>
+                                    <img src="./img/product-card-1.png" alt="" class="card__picture-img" data-color="#6D6D6D">
                                     <img src="./img/product-card-2.png" alt="" class="card__picture-img" data-color="#E80032">
-                                    <img src="./img/product-card-3.png" alt="" class="card__picture-img" data-color="#0B0B0B">
+                                    <img src="./img/product-card-3.png" alt="" class="card__picture-img color-picked" data-color="#0B0B0B">
 
                                     <div class="card__picture-colors">
-                                        <span class="card__picture-color" data-color="#0B0B0B"></span>
+                                        <span class="card__picture-color color-picked" data-color="#0B0B0B"></span>
                                         <span class="card__picture-color" data-color="#6D6D6D"></span>
                                         <span class="card__picture-color" data-color="#919191"></span>
                                         <span class="card__picture-color" data-color="#BBBABB"></span>
@@ -312,42 +425,49 @@
                                         <span class="card__picture-color" data-color="#E80032"></span>
                                     </div>
                                 </div>
-                                <a href="#!" class="product__card-title">LT mini silver Coin PVC</a>
+                                <div class="product__card-title-block">
+                                    <a href="./product-card.html" class="product__card-title">LT mini silver Coin PVC Eco</a>
+
+                                    <button class="product__card-favourite-btn">
+                                        <img src="./img/product-card-favourite.svg" alt="">
+                                    </button>
+                                </div>
                                 <p class="product__card-price">1 330 ₽ /м²</p>
                                 <button type="button" class="product__card-btn">
                                     <img src="./img/product-card-btn.svg" alt="" class="card__btn-img">
                                     <span>В корзину</span>
                                 </button>
                             </div>
-                            <div class="product__card">
-                                <div class="product__card-categories">
-                                    <span class="product__category category-hit">Хит продаж</span>
-                                    <span class="product__category category-eco">
-                                        <img src="./img/card_category-eco.png" alt="" class="product__category-img">
-                                    </span>
-                                </div>
-                                <div class="product__card-picture">
-                                    <img src="./img/product-card-1.png" alt="" class="card__picture-img color-picked" data-color="#6D6D6D">
-                                    <img src="./img/product-card-2.png" alt="" class="card__picture-img" data-color="#E80032">
-                                    <img src="./img/product-card-3.png" alt="" class="card__picture-img" data-color="#0B0B0B">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="feedback-bunner">
+            <div class="wrapper">
+                <div class="feedback__content">
+                    <div class="feedback__text">
+                        <p class="feedback-bunner__title">Плитка идеально подходит для нанесения индивидуального рисунка</p>
+                        <p class="feedback-bunner__subtitle">это может быть логотип или наименование  вашей организации, обозначение зонирования и другие индивидуальные обозначения</p>
 
-                                    <div class="card__picture-colors">
-                                        <span class="card__picture-color" data-color="#0B0B0B"></span>
-                                        <span class="card__picture-color" data-color="#6D6D6D"></span>
-                                        <span class="card__picture-color" data-color="#919191"></span>
-                                        <span class="card__picture-color" data-color="#BBBABB"></span>
-                                        <span class="card__picture-color" data-color="#4900CF"></span>
-                                        <span class="card__picture-color" data-color="#006F00"></span>
-                                        <span class="card__picture-color" data-color="#F8E600"></span>
-                                        <span class="card__picture-color" data-color="#E80032"></span>
-                                    </div>
-                                </div>
-                                <a href="#!" class="product__card-title">LT mini silver Coin PVC</a>
-                                <p class="product__card-price">1 330 ₽ /м²</p>
-                                <button type="button" class="product__card-btn">
-                                    <img src="./img/product-card-btn.svg" alt="" class="card__btn-img">
-                                    <span>В корзину</span>
-                                </button>
+                        <button class="feedback__btn">
+                            Связаться с нами
+                            <img src="./img/arrow-right-white.svg" alt="">
+                        </button>
+                    </div>
+    
+                    <div class="feedback-slider swiper">
+                        <div class="swiper-button-prev feedback-prev"></div>
+                        <div class="swiper-button-next feedback-next"></div>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide feedback-slide">
+                                <img src="./img/feedback-1.png" alt="">
+                            </div>
+                            <div class="swiper-slide feedback-slide">
+                                <img src="./img/feedback-2.png" alt="">
+                            </div>
+                            <div class="swiper-slide feedback-slide">
+                                <img src="./img/feedback-3.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -412,6 +532,171 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal account-login" data-modal="account-login">
+        <div class="modal__content">
+            <div class="modal__close-btn modal-close"></div>
+
+            <div class="modal__content-block account-login__block account-login__registration">
+                <p class="modal__title account-login__title">Регистрация</p>
+
+                <div class="account-type__btns">
+                    <button type="button" class="account-type__btn accountTypeBtn active-type" data-type="entity">Юр.лицо</button>
+                    <button type="button" class="account-type__btn accountTypeBtn" data-type="individual">Физ.лицо</button>
+                </div>
+
+                <form class="account-login__form contact-info__form formBlock active-type" data-type="entity">
+                    <label for="entity-login">Логин</label>
+                    <input type="text" id="entity-login" name="login" placeholder="Ваш логин" required>
+
+                    <label for="entity-сompany-name">Наименование организации</label>
+                    <input type="text" id="entity-сompany-name" name="company-name" placeholder="Наименование" required>
+
+                    <label for="entity-inn">ИНН</label>
+                    <input type="text" id="inn" name="company-inn" placeholder="ИНН организации" required>
+
+                    <label for="entity-name">Контактное лицо</label>
+                    <input type="text" id="entity-name" name="name" placeholder="ФИО" required>
+
+                    <label for="entity-number">Телефон</label>
+                    <input type="tel" id="entity-number" name="number" placeholder="+7" required>
+
+                    <label for="entity-email">E-mail</label>
+                    <input type="email" id="entity-email" name="email" placeholder="pochta@mail.ru" required>
+
+                    <label for="entity-password">Пароль</label>
+                    <div class="password-container">
+                        <input type="password" id="entity-password" name="old-password" placeholder="*************">
+                        <div class="toggle-password">
+                            <img src="./img/password-show.svg" alt="">
+                        </div>
+                    </div>
+                
+                    <label for="entity-repeat-password">Повторите пароль</label>
+                    <div class="password-container">
+                        <input type="text" id="entity-repeat-password" name="entity-repeat-password" placeholder="*************">
+                        <div class="toggle-password">
+                            <img src="./img/password-show.svg" alt="">
+                        </div>
+                    </div>
+
+                    <label class="account-login__checkbox circle-checkbox">
+                        <input type="checkbox" checked>
+                        <span class="custom-checkbox"></span>
+                        <span>Согласен с <a href="#!">Политикой обработки персональных данных </a></span>
+                    </label>
+                    <label class="account-login__checkbox circle-checkbox">
+                        <input type="checkbox" checked>
+                        <span class="custom-checkbox"></span>
+                        Подписаться на информационную рассылку
+                    </label>
+
+                    <div class="form__bottom-btns">
+                        <button class="submit-form">Зарегистрироваться</button>
+                    </div>
+                </form>
+
+                <form class="account-login__form contact-info__form formBlock" data-type="individual">
+                    <label for="individual-login">Логин</label>
+                    <input type="text" id="individual-login" name="login" placeholder="Ваш логин" required>
+
+                    <label for="individual-name">ФИО</label>
+                    <input type="text" id="individual-name" name="name" placeholder="ФИО" required>
+
+                    <label for="individual-number">Телефон</label>
+                    <input type="tel" id="individual-number" name="number" placeholder="+7" required>
+
+                    <label for="individual-email">E-mail</label>
+                    <input type="email" id="individual-email" name="email" placeholder="pochta@mail.ru" required>
+
+                    <label for="individual-password">*Пароль</label>
+                    <div class="password-container">
+                        <input type="password" id="individual-password" name="password" placeholder="*************">
+                        <div class="toggle-password">
+                            <img src="./img/password-show.svg" alt="">
+                        </div>
+                    </div>
+                
+                    <label for="individual-repeat-password">*Повторите пароль</label>
+                    <div class="password-container">
+                        <input type="text" id="individual-repeat-password" name="repeat-password" placeholder="*************">
+                        <div class="toggle-password">
+                            <img src="./img/password-show.svg" alt="">
+                        </div>
+                    </div>
+
+                    <label class="account-login__checkbox circle-checkbox">
+                        <input type="checkbox" checked>
+                        <span class="custom-checkbox"></span>
+                        <span>Согласен с <a href="#!">Политикой обработки персональных данных </a></span>
+                    </label>
+                    <label class="account-login__checkbox circle-checkbox">
+                        <input type="checkbox" checked>
+                        <span class="custom-checkbox"></span>
+                        Подписаться на информационную рассылку
+                    </label>
+
+                    <div class="form__bottom-btns">
+                        <button class="submit-form">Зарегистрироваться</button>
+                    </div>
+                </form>
+
+                <p class="account-login__switch">Уже есть аккаунт? <a href="#!">Войти</a></p>
+
+                <div class="account-login__social">
+                    <p class="account-login__social-title">или зарегистрируйтесь с помощью</p>
+                    <div class="account-login__social-links">
+                        <a href="#!">
+                            <img src="./img/gray-vk.svg" alt="">
+                        </a>
+                        <a href="#!">
+                            <img src="./img/gray-google.svg" alt="">
+                        </a>
+                        <a href="#!">
+                            <img src="./img/gray-yandex.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__content-block account-login__block  account-login__entry active-type">
+                <p class="modal__title account-login__title">Вход</p>
+
+                <form class="account-login__entry-form contact-info__form active-type">
+                    <label for="account-entry-login">Логин</label>
+                    <input type="text" id="account-entry-login" name="login" placeholder="Ваш логин" required>
+
+                    <label for="account-entry-password">Пароль</label>
+                    <div class="password-container">
+                        <input type="password" id="account-entry-password" name="password" placeholder="*************">
+                        <div class="toggle-password">
+                            <img src="./img/password-show.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="form__bottom-btns">
+                        <button class="submit-form">Войти</button>
+                    </div>
+                </form>
+
+                <p class="account-login__switch">Нет аккаунта? <a href="#!">Зарегистрироваться</a></p>
+
+                <div class="account-login__social">
+                    <p class="account-login__social-title">или войдите с помощью</p>
+                    <div class="account-login__social-links">
+                        <a href="#!">
+                            <img src="./img/gray-vk.svg" alt="">
+                        </a>
+                        <a href="#!">
+                            <img src="./img/gray-google.svg" alt="">
+                        </a>
+                        <a href="#!">
+                            <img src="./img/gray-yandex.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>

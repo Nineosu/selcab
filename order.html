@@ -67,11 +67,11 @@
                 </div>
 
                 <div class="header__links">
-                    <a href="#!" class="header__links-item">
-                        <img src="./img/header-black__links-account.png" alt="" class="header__links-ico">
+                    <a href="#!" class="header__links-item modal-btn" data-modal="account-login">
+                        <img src="./img/header__links-account.svg" alt="" class="header__links-ico">
                     </a>
                     <a href="./basket.html" class="header__links-item">
-                        <img src="./img/header-black__links-cart.svg" alt="" class="header__links-ico">
+                        <img src="./img/header__links-cart.svg" alt="" class="header__links-ico">
                     </a>
                 </div>
             </div>
@@ -101,75 +101,136 @@
                             <legend class="form__section-title">Тип плательщика</legend>
 
                             <div class="order__form-section">
-                                <label class="radio-input">
-                                    <input type="radio" class="form__section-radio" name="payer-type" id="payer-ip">
+                                <label class="radio-input accountTypeBtn" data-type="individual">
+                                    <input type="radio" class="form__section-radio" name="payer-type" id="payer-ip" checked>
                                     <span>Физическое лицо</span>
                                 </label>
-                                <label class="radio-input">
+                                <label class="radio-input accountTypeBtn" data-type="entity">
                                     <input type="radio" class="form__section-radio" name="payer-type" id="payer-lp">
                                     <span>Юридическое лицо</span>
                                 </label>
                             </div>
                         </fieldset>
-
-                        <fieldset>
-                            <legend class="form__section-title legend-required"><sup>*</sup>Регион доставки</legend>
-                            <span class="legend-subtitle">Поле обязательно для заполнения</span>
-
-                            <textarea name="region" id="region-delivery" placeholder="Введите название"></textarea>
-                        </fieldset>
                         
                         <fieldset>
                             <legend class="form__section-title">Доставка</legend>
 
-                            <div class="order__form-section">
+                            <div class="order__form-section order__form-select-section">
                                 <label class="radio-input">
                                     <input type="radio" class="form__section-radio" name="delivery-type" id="delivery-self">
                                     <span>Самовывоз</span>
                                 </label>
-                                <label class="radio-input">
-                                    <input type="radio" class="form__section-radio" name="delivery-type" id="delivery-company">
-                                    <span>Доставка транспортной компанией</span>
-                                </label>
+                                <div class="delivery__block">
+                                    <label class="radio-input">
+                                        <input type="radio" class="form__section-radio" name="delivery-type" id="delivery-company">
+                                        <span>Доставка транспортной компанией</span>
+                                    </label>
+
+                                    <label class="select-label">
+                                        <span>Выберите из списка</span>
+                                        <div class="custom-select address-select">
+                                            <select name="address" id="address" required>
+                                            <option value="CDEK" selected>СДЕК</option>
+                                            </select>
+                                        </div>
+                                    </label>
+
+                                    <label class="select-label address-select-label">
+                                        <span>*Регион доставки</span>
+                                        <div class="custom-select address-select">
+                                            <select name="address" id="address" required>
+                                            <option value="moscow" selected>Московская область</option>
+                                            <option value="spb">Санкт-Петербург</option>
+                                            <option value="novosibirsk">Новосибирск</option>
+                                            <option value="ekaterinburg">Екатеринбург</option>
+                                            <option value="kazan">Казань</option>
+                                            </select>
+                                        </div>
+                                    </label>
+                                </div>
                             </div>
                         </fieldset>
-                        <fieldset>
-                            <legend class="form__section-title">Оплата</legend>
-
-                            <div class="order__form-section">
-                                <label class="radio-input">
-                                    <input type="radio" class="form__section-radio" name="payment-type" id="payment-after">
-                                    <span>Оплата после согласования с менеджером</span>
+                        <div class="order__form-type-blocks order__form-individual-blocks formBlock active-type" data-type="individual">
+                            <fieldset>
+                                <legend class="form__section-title">Оплата</legend>
+    
+                                <div class="order__form-section">
+                                    <label class="radio-input">
+                                        <input type="radio" class="form__section-radio" name="payment-type" id="payment-sbp">
+                                        <span>СБП</span>
+                                        <img src="./img/form-sbp.png" alt="">
+                                    </label>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend class="form__section-title">Контактные данные</legend>
+    
+                                <label class="text-input">
+                                    <p>ФИО</p>
+                                    <input type="text" class="order__form-input" name="name" placeholder="Ваше ФИО" required>
                                 </label>
-                                <label class="radio-input">
-                                    <input type="radio" class="form__section-radio" name="payment-type" id="payment-sbp">
-                                    <span>СБП</span>
-                                    <img src="./img/form-sbp.png" alt="">
+                                <label class="text-input">
+                                    <p>Телефон</p>
+                                    <input type="tel" class="order__form-input" name="tel" placeholder="+7" required>
                                 </label>
-                            </div>
-                        </fieldset>
-                        <fieldset>
-                            <legend class="form__section-title">Контактные данные</legend>
+                                <label class="text-input">
+                                    <p>E-mail</p>
+                                    <input type="email" class="order__form-input" name="e-mail" placeholder="pochta@mail.ru" required>
+                                </label>
+                                <label class="text-input">
+                                    <p>Комментарий к заказу</p>
+                                    <textarea name="commentary" id="commentary" placeholder="Ваш комментарий"></textarea>
+                                </label>
+                            </fieldset>
+                        </div>
+                        <div class="order__form-type-blocks order__form-entity-blocks formBlock" data-type="entity">
+                            <fieldset>
+                                <legend class="form__section-title">Оплата</legend>
+    
+                                <div class="order__form-section">
+                                    <label class="radio-input">
+                                        <input type="radio" class="form__section-radio" name="payment-type" id="payment-sbp">
+                                        <span>Оплата по счету</span>
+                                    </label>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend class="form__section-title">Контактные данные</legend>
+    
+                                <label class="text-input">
+                                    <p>Наименование организации</p>
+                                    <input type="text" class="order__form-input" name="company-name" placeholder="Наименование" required>
+                                </label>
+                                <label class="text-input">
+                                    <p>ИНН</p>
+                                    <input type="text" class="order__form-input" name="company-name" placeholder="ИНН организации" required>
+                                </label>
+                                <label class="text-input">
+                                    <p>Телефон</p>
+                                    <input type="tel" class="order__form-input" name="tel" placeholder="+7" required>
+                                </label>
+                                <label class="text-input">
+                                    <p>E-mail</p>
+                                    <input type="email" class="order__form-input" name="e-mail" placeholder="pochta@mail.ru" required>
+                                </label>
+                                <label class="text-input">
+                                    <p>Комментарий к заказу</p>
+                                    <textarea name="commentary" id="commentary" placeholder="Ваш комментарий"></textarea>
+                                </label>
+                            </fieldset>
+                        </div>
 
-                            <label class="text-input">
-                                <p>ФИО</p>
-                                <input type="text" class="order__form-input" name="name" placeholder="Ваше ФИО">
-                            </label>
-                            <label class="text-input">
-                                <p>Телефон</p>
-                                <input type="tel" class="order__form-input" name="tel" placeholder="+7">
-                            </label>
-                            <label class="text-input">
-                                <p>E-mail</p>
-                                <input type="email" class="order__form-input" name="e-mail" placeholder="pochta@mail.ru">
-                            </label>
-                            <label class="text-input">
-                                <p>Комментарий к заказу</p>
-                                <textarea name="commentary" id="commentary" placeholder="Ваш комментарий"></textarea>
-                            </label>
-                        </fieldset>
+                        <label class="order__form-checkbox circle-checkbox">
+                            <input type="checkbox" checked required>
+                            <span class="custom-checkbox"></span>
+                            Я соглашаюсь с <a href="#!">Правилами использования</a>
+                        </label>
 
-                        <button type="submit" class="order__form-btn basket__order-link">Заказать</button>
+                        <div class="order__warning">
+                            <img src="./img/order-warning.svg" alt="" class="order__warning-img">
+                            <p class="order__warning-title">Оплата и доставка после согласования заказа с менеджером</p>
+                        </div>
+                        <button type="button" class="order__form-btn basket__order-link modal-btn" data-modal="order-complete">Подтвердить</button>
                     </form>
 
                     <div class="basket__block">
@@ -214,7 +275,7 @@
                             <div class="basket__info-block">
                                 <div class="info__block-text">
                                     <p class="info__block-title">Варианты оплаты</p>
-                                    <p class="info__block-subtitle">Оплата юр. лицу по выставленному счету при получении или СБП</p>
+                                    <p class="info__block-subtitle">Оплата по  СБП</p>
                                 </div>
 
                             </div>
@@ -282,6 +343,183 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal order-complete" data-modal="order-complete">
+        <div class="modal__content">
+            <div class="modal__close-btn modal-close"></div>
+            <p class="account-modal__title">Заказ оформлен!</p>
+            <p class="account-modal__subtitle">Ожидайте звонка менеджера в течении 15 минут</p>
+
+            <div class="account-modal__btns">
+                <button class="account-modal__btn agree modal-close">Продолжить покупки</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal account-login" data-modal="account-login">
+        <div class="modal__content">
+            <div class="modal__close-btn modal-close"></div>
+
+            <div class="modal__content-block account-login__block account-login__registration">
+                <p class="modal__title account-login__title">Регистрация</p>
+
+                <div class="account-type__btns">
+                    <button type="button" class="account-type__btn accountTypeBtn active-type" data-type="entity">Юр.лицо</button>
+                    <button type="button" class="account-type__btn accountTypeBtn" data-type="individual">Физ.лицо</button>
+                </div>
+
+                <form class="account-login__form contact-info__form formBlock active-type" data-type="entity">
+                    <label for="entity-login">Логин</label>
+                    <input type="text" id="entity-login" name="login" placeholder="Ваш логин" required>
+
+                    <label for="entity-сompany-name">Наименование организации</label>
+                    <input type="text" id="entity-сompany-name" name="company-name" placeholder="Наименование" required>
+
+                    <label for="entity-inn">ИНН</label>
+                    <input type="text" id="inn" name="company-inn" placeholder="ИНН организации" required>
+
+                    <label for="entity-name">Контактное лицо</label>
+                    <input type="text" id="entity-name" name="name" placeholder="ФИО" required>
+
+                    <label for="entity-number">Телефон</label>
+                    <input type="tel" id="entity-number" name="number" placeholder="+7" required>
+
+                    <label for="entity-email">E-mail</label>
+                    <input type="email" id="entity-email" name="email" placeholder="pochta@mail.ru" required>
+
+                    <label for="entity-password">Пароль</label>
+                    <div class="password-container">
+                        <input type="password" id="entity-password" name="old-password" placeholder="*************">
+                        <div class="toggle-password">
+                            <img src="./img/password-show.svg" alt="">
+                        </div>
+                    </div>
+                
+                    <label for="entity-repeat-password">Повторите пароль</label>
+                    <div class="password-container">
+                        <input type="text" id="entity-repeat-password" name="entity-repeat-password" placeholder="*************">
+                        <div class="toggle-password">
+                            <img src="./img/password-show.svg" alt="">
+                        </div>
+                    </div>
+
+                    <label class="account-login__checkbox circle-checkbox">
+                        <input type="checkbox" checked>
+                        <span class="custom-checkbox"></span>
+                        <span>Согласен с <a href="#!">Политикой обработки персональных данных </a></span>
+                    </label>
+                    <label class="account-login__checkbox circle-checkbox">
+                        <input type="checkbox" checked>
+                        <span class="custom-checkbox"></span>
+                        Подписаться на информационную рассылку
+                    </label>
+
+                    <div class="form__bottom-btns">
+                        <button class="submit-form">Зарегистрироваться</button>
+                    </div>
+                </form>
+
+                <form class="account-login__form contact-info__form formBlock" data-type="individual">
+                    <label for="individual-login">Логин</label>
+                    <input type="text" id="individual-login" name="login" placeholder="Ваш логин" required>
+
+                    <label for="individual-name">ФИО</label>
+                    <input type="text" id="individual-name" name="name" placeholder="ФИО" required>
+
+                    <label for="individual-number">Телефон</label>
+                    <input type="tel" id="individual-number" name="number" placeholder="+7" required>
+
+                    <label for="individual-email">E-mail</label>
+                    <input type="email" id="individual-email" name="email" placeholder="pochta@mail.ru" required>
+
+                    <label for="individual-password">*Пароль</label>
+                    <div class="password-container">
+                        <input type="password" id="individual-password" name="password" placeholder="*************">
+                        <div class="toggle-password">
+                            <img src="./img/password-show.svg" alt="">
+                        </div>
+                    </div>
+                
+                    <label for="individual-repeat-password">*Повторите пароль</label>
+                    <div class="password-container">
+                        <input type="text" id="individual-repeat-password" name="repeat-password" placeholder="*************">
+                        <div class="toggle-password">
+                            <img src="./img/password-show.svg" alt="">
+                        </div>
+                    </div>
+
+                    <label class="account-login__checkbox circle-checkbox">
+                        <input type="checkbox" checked>
+                        <span class="custom-checkbox"></span>
+                        <span>Согласен с <a href="#!">Политикой обработки персональных данных </a></span>
+                    </label>
+                    <label class="account-login__checkbox circle-checkbox">
+                        <input type="checkbox" checked>
+                        <span class="custom-checkbox"></span>
+                        Подписаться на информационную рассылку
+                    </label>
+
+                    <div class="form__bottom-btns">
+                        <button class="submit-form">Зарегистрироваться</button>
+                    </div>
+                </form>
+
+                <p class="account-login__switch">Уже есть аккаунт? <a href="#!">Войти</a></p>
+
+                <div class="account-login__social">
+                    <p class="account-login__social-title">или зарегистрируйтесь с помощью</p>
+                    <div class="account-login__social-links">
+                        <a href="#!">
+                            <img src="./img/gray-vk.svg" alt="">
+                        </a>
+                        <a href="#!">
+                            <img src="./img/gray-google.svg" alt="">
+                        </a>
+                        <a href="#!">
+                            <img src="./img/gray-yandex.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__content-block account-login__block  account-login__entry active-type">
+                <p class="modal__title account-login__title">Вход</p>
+
+                <form class="account-login__entry-form contact-info__form active-type">
+                    <label for="account-entry-login">Логин</label>
+                    <input type="text" id="account-entry-login" name="login" placeholder="Ваш логин" required>
+
+                    <label for="account-entry-password">Пароль</label>
+                    <div class="password-container">
+                        <input type="password" id="account-entry-password" name="password" placeholder="*************">
+                        <div class="toggle-password">
+                            <img src="./img/password-show.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="form__bottom-btns">
+                        <button class="submit-form">Войти</button>
+                    </div>
+                </form>
+
+                <p class="account-login__switch">Нет аккаунта? <a href="#!">Зарегистрироваться</a></p>
+
+                <div class="account-login__social">
+                    <p class="account-login__social-title">или войдите с помощью</p>
+                    <div class="account-login__social-links">
+                        <a href="#!">
+                            <img src="./img/gray-vk.svg" alt="">
+                        </a>
+                        <a href="#!">
+                            <img src="./img/gray-google.svg" alt="">
+                        </a>
+                        <a href="#!">
+                            <img src="./img/gray-yandex.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
