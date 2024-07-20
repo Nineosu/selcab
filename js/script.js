@@ -41,8 +41,9 @@ window.addEventListener('DOMContentLoaded', () => {
         direction: 'horizontal',
         loop: false,
         centeredSlides: true,
-        slidesPerView: 1.5,
+        slidesPerView: 1.2,
         spaceBetween: 0,
+        initialSlide: 1,
 
         breakpoints: {
             768: {
@@ -89,6 +90,7 @@ window.addEventListener('DOMContentLoaded', () => {
         centeredSlides: true,
         slidesPerView: 1,
         spaceBetween: 0,
+        initialSlide: 1,
 
         breakpoints: {
             768: {
@@ -194,17 +196,19 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     // account login
-    const loginModal = document.querySelector('.account-login');
-    const loginSwitches = loginModal.querySelectorAll('.account-login__switch');
-    const loginModalBlocks = loginModal.querySelectorAll('.account-login__block');
-
-    loginSwitches.forEach(item => {
-        item.addEventListener('click', () => {
-            loginModalBlocks.forEach(block => {
-                block.classList.toggle('active-type');
+    if (document.querySelector('.account-login')) {
+        const loginModal = document.querySelector('.account-login');
+        const loginSwitches = loginModal.querySelectorAll('.account-login__switch');
+        const loginModalBlocks = loginModal.querySelectorAll('.account-login__block');
+    
+        loginSwitches.forEach(item => {
+            item.addEventListener('click', () => {
+                loginModalBlocks.forEach(block => {
+                    block.classList.toggle('active-type');
+                });
             });
         });
-    });
+    }
     
     // Faq
     
