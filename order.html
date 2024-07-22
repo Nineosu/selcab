@@ -68,10 +68,10 @@
 
                 <div class="header__links">
                     <a href="#!" class="header__links-item modal-btn" data-modal="account-login">
-                        <img src="./img/header__links-account.svg" alt="" class="header__links-ico">
+                        <img src="./img/header-black__links-account.png" alt="" class="header__links-ico">
                     </a>
                     <a href="./basket.html" class="header__links-item">
-                        <img src="./img/header__links-cart.svg" alt="" class="header__links-ico">
+                        <img src="./img/header-black__links-cart.svg" alt="" class="header__links-ico">
                     </a>
                 </div>
             </div>
@@ -129,7 +129,7 @@
                                     <label class="select-label">
                                         <span>Выберите из списка</span>
                                         <div class="custom-select address-select">
-                                            <select name="address" id="address" required>
+                                            <select name="address" id="delivery-type" required>
                                             <option value="CDEK" selected>СДЕК</option>
                                             </select>
                                         </div>
@@ -138,7 +138,7 @@
                                     <label class="select-label address-select-label">
                                         <span>*Регион доставки</span>
                                         <div class="custom-select address-select">
-                                            <select name="address" id="address" required>
+                                            <select name="address" id="delivery-address" required>
                                             <option value="moscow" selected>Московская область</option>
                                             <option value="spb">Санкт-Петербург</option>
                                             <option value="novosibirsk">Новосибирск</option>
@@ -156,7 +156,7 @@
     
                                 <div class="order__form-section">
                                     <label class="radio-input">
-                                        <input type="checkbox" class="form__section-radio" name="payment-type" id="payment-sbp">
+                                        <input type="checkbox" class="form__section-radio" name="payment-type" id="individual-payment-sbp">
                                         <span>СБП</span>
                                         <img src="./img/form-sbp.png" alt="">
                                     </label>
@@ -179,7 +179,7 @@
                                 </label>
                                 <label class="text-input">
                                     <p>Комментарий к заказу</p>
-                                    <textarea name="commentary" id="commentary" placeholder="Ваш комментарий"></textarea>
+                                    <textarea name="commentary" id="individual-commentary" placeholder="Ваш комментарий"></textarea>
                                 </label>
                             </fieldset>
                         </div>
@@ -189,7 +189,7 @@
     
                                 <div class="order__form-section">
                                     <label class="radio-input">
-                                        <input type="radio" class="form__section-radio" name="payment-type" id="payment-sbp">
+                                        <input type="radio" class="form__section-radio" name="payment-type" id="entity-payment-sbp">
                                         <span>Оплата по счету</span>
                                     </label>
                                 </div>
@@ -215,7 +215,7 @@
                                 </label>
                                 <label class="text-input">
                                     <p>Комментарий к заказу</p>
-                                    <textarea name="commentary" id="commentary" placeholder="Ваш комментарий"></textarea>
+                                    <textarea name="commentary" id="entity-commentary" placeholder="Ваш комментарий"></textarea>
                                 </label>
                             </fieldset>
                         </div>
@@ -223,7 +223,7 @@
                         <label class="order__form-checkbox circle-checkbox">
                             <input type="checkbox" required>
                             <span class="custom-checkbox"></span>
-                            Я соглашаюсь с <a href="#!">Правилами использования</a>
+                            <span>Я соглашаюсь с <a href="#!">Правилами использования</a></span>
                         </label>
 
                         <div class="order__warning">
@@ -351,7 +351,7 @@
             <p class="account-modal__subtitle">Ожидайте звонка менеджера в течении 15 минут</p>
 
             <div class="account-modal__btns">
-                <button class="account-modal__btn agree modal-close">Продолжить покупки</button>
+                <a href="./catalog.html" class="account-modal__btn agree modal-close">Продолжить покупки</a>
             </div>
         </div>
     </div>
@@ -470,13 +470,13 @@
                     <p class="account-login__social-title">или зарегистрируйтесь с помощью</p>
                     <div class="account-login__social-links">
                         <a href="#!">
-                            <img src="./img/gray-vk.svg" alt="">
+                            <img src="./img/contact-info__vk.svg" alt="">
                         </a>
                         <a href="#!">
-                            <img src="./img/gray-google.svg" alt="">
+                            <img src="./img/contact-info__google.svg" alt="">
                         </a>
                         <a href="#!">
-                            <img src="./img/gray-yandex.svg" alt="">
+                            <img src="./img/contact-info__yandex.svg" alt="">
                         </a>
                     </div>
                 </div>
@@ -507,13 +507,13 @@
                     <p class="account-login__social-title">или войдите с помощью</p>
                     <div class="account-login__social-links">
                         <a href="#!">
-                            <img src="./img/gray-vk.svg" alt="">
+                            <img src="./img/contact-info__vk.svg" alt="">
                         </a>
                         <a href="#!">
-                            <img src="./img/gray-google.svg" alt="">
+                            <img src="./img/contact-info__google.svg" alt="">
                         </a>
                         <a href="#!">
-                            <img src="./img/gray-yandex.svg" alt="">
+                            <img src="./img/contact-info__yandex.svg" alt="">
                         </a>
                     </div>
                 </div>

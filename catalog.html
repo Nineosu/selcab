@@ -154,42 +154,42 @@
                         <p class="catalog__categories-title">Готовые решения</p>
 
                         <ul class="catalog__categories-list">
-                            <li class="categories__list-item">
-                                <a href="#!" class="categories__list-link">Гаражи и парковки</a>
+                            <li class="categories__list-link" data-category="garages">
+                                <a href="#!" class="categories__list-item">Гаражи и парковки</a>
                             </li>
-                            <li class="categories__list-item">
-                                <a href="#!" class="categories__list-link">Тренажерные залы и фитнес-клубы</a>
+                            <li class="categories__list-link" data-category="gyms">
+                                <a href="#!" class="categories__list-item">Тренажерные залы и фитнес-клубы</a>
                             </li>
-                            <li class="categories__list-item">
-                                <a href="#!" class="categories__list-link">Автосервисы и автомойки</a>
+                            <li class="categories__list-link" data-category="autos">
+                                <a href="#!" class="categories__list-item">Автосервисы и автомойки</a>
                             </li>
-                            <li class="categories__list-item">
-                                <a href="#!" class="categories__list-link">Складские и промышленные помещения</a>
+                            <li class="categories__list-link" data-category="storages">
+                                <a href="#!" class="categories__list-item">Складские и промышленные помещения</a>
                             </li>
-                            <li class="categories__list-item">
-                                <a href="#!" class="categories__list-link">Модульный пол</a>
+                            <li class="categories__list-link" data-category="module-floor">
+                                <a href="#!" class="categories__list-item">Модульный пол</a>
                             </li>
-                            <li class="categories__list-item active-item">
-                                <a href="#!" class="categories__list-link">Смотреть все</a>
+                            <li class="categories__list-link active-item" data-category="all">
+                                <a href="#!" class="categories__list-item">Смотреть все</a>
                             </li>
                         </ul>
                     </div>
                     <select name="categories" id="categories-select" class="categories__select">
                         <option value="">Смотреть все</option>
                         <option value="garages">
-                            <a href="#!" class="categories__list-link">Гаражи и парковки</a>
+                            <a href="#!" class="categories__list-link" data-category="garages">Гаражи и парковки</a>
                         </option>
                         <option value="gyms">
-                            <a href="#!" class="categories__list-link">Тренажерные залы и фитнес-клубы</a>
+                            <a href="#!" class="categories__list-link" data-category="gyms">Тренажерные залы и фитнес-клубы</a>
                         </option>
                         <option value="autos">
-                            <a href="#!" class="categories__list-link">Автосервисы и автомойки</a>
+                            <a href="#!" class="categories__list-link" data-category="autos">Автосервисы и автомойки</a>
                         </option>
                         <option value="storages">
-                            <a href="#!" class="categories__list-link">Складские и промышленные помещения</a>
+                            <a href="#!" class="categories__list-link" data-category="storages">Складские и промышленные помещения</a>
                         </option>
                         <option value="module-floor">
-                            <a href="#!" class="categories__list-link">Модульный пол</a>
+                            <a href="#!" class="categories__list-link" data-category="module-floor">Модульный пол</a>
                         </option>
                         
                     </select>
@@ -201,7 +201,7 @@
                                 <select name="factura" id="factura-select" class="products__filter-select">
                                     <option value="Diamond">Diamond (Металл)</option>
                                     <option value="Coin">Coin (Монетка)</option>
-                                    <option value="Leather">Leather (Шагрень</option>
+                                    <option value="Leather">Leather (Шагрень)</option>
                                 </select>
                             </div>
 
@@ -214,19 +214,19 @@
 
                                 <ul class="products__filter-list">
                                     <li class="filter__list-item active-item">
-                                        <a href="#!" class="filter__list-link">Новинка</a>
+                                        <button class="filter__list-btn filter-btn" data-filter="new">Новинка</button>
                                     </li>
                                     <li class="filter__list-item">
-                                        <a href="#!" class="filter__list-link">Выгодная цена</a>
+                                        <button class="filter__list-btn filter-btn" data-filter="price">Выгодная цена</button>
                                     </li>
                                     <li class="filter__list-item">
-                                        <a href="#!" class="filter__list-link">Специальное предложение</a>
+                                        <button class="filter__list-btn filter-btn" data-filter="offer">Специальное предложение</button>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         <div class="product__cards">
-                            <div class="product__card">
+                            <div class="product__card filter-item categories-item item-active" data-filter="offer" data-category="garages">
                                 <div class="product__card-picture">
                                     <div class="product__card-categories">
                                         <span class="product__category category-hit"><img src="./img/category-hit.svg" alt=""></span>
@@ -252,9 +252,7 @@
                                 <div class="product__card-title-block">
                                     <a href="./product-card.html" class="product__card-title">LT mini silver Coin PVC Eco</a>
 
-                                    <button class="product__card-favourite-btn">
-                                        <img src="./img/product-card-favourite.svg" alt="">
-                                    </button>
+                                    <button type="button" class="product__card-favourite-btn favourite-btn"></button>
                                 </div>
                                 <p class="product__card-price">1 330 ₽ /м²</p>
                                 <button type="button" class="product__card-btn">
@@ -262,7 +260,7 @@
                                     <span>В корзину</span>
                                 </button>
                             </div>
-                            <div class="product__card">
+                            <div class="product__card filter-item categories-item item-active" data-filter="offer" data-category="storages">
                                 <div class="product__card-picture">
                                     <div class="product__card-categories">
                                     </div>
@@ -284,9 +282,7 @@
                                 <div class="product__card-title-block">
                                     <a href="./product-card.html" class="product__card-title">LT mini silver Coin PVC</a>
 
-                                    <button class="product__card-favourite-btn">
-                                        <img src="./img/product-card-favourite.svg" alt="">
-                                    </button>
+                                    <button type="button" class="product__card-favourite-btn favourite-btn"></button>
                                 </div>
                                 <p class="product__card-price">1 330 ₽ /м²</p>
                                 <button type="button" class="product__card-btn">
@@ -294,7 +290,7 @@
                                     <span>В корзину</span>
                                 </button>
                             </div>
-                            <div class="product__card">
+                            <div class="product__card filter-item categories-item item-active" data-filter="price" data-category="garages">
                                 <div class="product__card-picture">
                                     <div class="product__card-categories">
                                         <span class="product__category category-hit"><img src="./img/category-hit.svg" alt=""></span>
@@ -320,9 +316,7 @@
                                 <div class="product__card-title-block">
                                     <a href="./product-card.html" class="product__card-title">LT mini silver Coin PVC Eco</a>
 
-                                    <button class="product__card-favourite-btn">
-                                        <img src="./img/product-card-favourite.svg" alt="">
-                                    </button>
+                                    <button type="button" class="product__card-favourite-btn favourite-btn"></button>
                                 </div>
                                 <p class="product__card-price">1 330 ₽ /м²</p>
                                 <button type="button" class="product__card-btn">
@@ -330,7 +324,8 @@
                                     <span>В корзину</span>
                                 </button>
                             </div>
-                            <div class="product__card">
+                            <div class="product__card filter-item categories-item item-active"
+                            data-filter="price" data-category="autos">
                                 <div class="product__card-picture">
                                     <div class="product__card-categories">
                                         <span class="product__category category-hit"><img src="./img/category-hit.svg" alt=""></span>
@@ -356,9 +351,7 @@
                                 <div class="product__card-title-block">
                                     <a href="./product-card.html" class="product__card-title">LT mini silver Coin PVC Eco</a>
 
-                                    <button class="product__card-favourite-btn">
-                                        <img src="./img/product-card-favourite.svg" alt="">
-                                    </button>
+                                    <button type="button" class="product__card-favourite-btn favourite-btn"></button>
                                 </div>
                                 <p class="product__card-price">1 330 ₽ /м²</p>
                                 <button type="button" class="product__card-btn">
@@ -366,7 +359,8 @@
                                     <span>В корзину</span>
                                 </button>
                             </div>
-                            <div class="product__card">
+                            <div class="product__card filter-item categories-item item-active"
+                            data-filter="new" data-category="module-floor">
                                 <div class="product__card-picture">
                                     <div class="product__card-categories">
                                         <span class="product__category category-hit"><img src="./img/category-hit.svg" alt=""></span>
@@ -392,9 +386,7 @@
                                 <div class="product__card-title-block">
                                     <a href="./product-card.html" class="product__card-title">LT mini silver Coin PVC Eco</a>
 
-                                    <button class="product__card-favourite-btn">
-                                        <img src="./img/product-card-favourite.svg" alt="">
-                                    </button>
+                                    <button type="button" class="product__card-favourite-btn favourite-btn"></button>
                                 </div>
                                 <p class="product__card-price">1 330 ₽ /м²</p>
                                 <button type="button" class="product__card-btn">
@@ -402,7 +394,7 @@
                                     <span>В корзину</span>
                                 </button>
                             </div>
-                            <div class="product__card">
+                            <div class="product__card filter-item categories-item item-active" data-filter="new" data-category="gyms">
                                 <div class="product__card-picture">
                                     <div class="product__card-categories">
                                         <span class="product__category category-hit"><img src="./img/category-hit.svg" alt=""></span>
@@ -428,9 +420,7 @@
                                 <div class="product__card-title-block">
                                     <a href="./product-card.html" class="product__card-title">LT mini silver Coin PVC Eco</a>
 
-                                    <button class="product__card-favourite-btn">
-                                        <img src="./img/product-card-favourite.svg" alt="">
-                                    </button>
+                                    <button type="button" class="product__card-favourite-btn favourite-btn"></button>
                                 </div>
                                 <p class="product__card-price">1 330 ₽ /м²</p>
                                 <button type="button" class="product__card-btn">
@@ -450,10 +440,10 @@
                         <p class="feedback-bunner__title">Плитка идеально подходит для нанесения индивидуального рисунка</p>
                         <p class="feedback-bunner__subtitle">это может быть логотип или наименование  вашей организации, обозначение зонирования и другие индивидуальные обозначения</p>
 
-                        <button class="feedback__btn">
+                        <a href="./contacts.html" class="feedback__btn modal-btn" data-modal="">
                             Связаться с нами
                             <img src="./img/arrow-right-white.svg" alt="">
-                        </button>
+                        </a>
                     </div>
     
                     <div class="feedback-slider swiper">
@@ -647,13 +637,13 @@
                     <p class="account-login__social-title">или зарегистрируйтесь с помощью</p>
                     <div class="account-login__social-links">
                         <a href="#!">
-                            <img src="./img/gray-vk.svg" alt="">
+                            <img src="./img/contact-info__vk.svg" alt="">
                         </a>
                         <a href="#!">
-                            <img src="./img/gray-google.svg" alt="">
+                            <img src="./img/contact-info__google.svg" alt="">
                         </a>
                         <a href="#!">
-                            <img src="./img/gray-yandex.svg" alt="">
+                            <img src="./img/contact-info__yandex.svg" alt="">
                         </a>
                     </div>
                 </div>
@@ -684,13 +674,13 @@
                     <p class="account-login__social-title">или войдите с помощью</p>
                     <div class="account-login__social-links">
                         <a href="#!">
-                            <img src="./img/gray-vk.svg" alt="">
+                            <img src="./img/contact-info__vk.svg" alt="">
                         </a>
                         <a href="#!">
-                            <img src="./img/gray-google.svg" alt="">
+                            <img src="./img/contact-info__google.svg" alt="">
                         </a>
                         <a href="#!">
-                            <img src="./img/gray-yandex.svg" alt="">
+                            <img src="./img/contact-info__yandex.svg" alt="">
                         </a>
                     </div>
                 </div>

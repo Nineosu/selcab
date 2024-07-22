@@ -224,6 +224,12 @@ button:hover,
     align-items: center;
     gap: 30px;
 }
+.account-login__social-links img {
+    filter: contrast(0.5) grayscale(1);
+}
+.account-login__social-links img:hover {
+    filter: none;
+}
 
 .account-login__entry .password-container {
     margin-bottom: 0;
@@ -626,11 +632,12 @@ nav .header__tel {
     justify-content: space-between;
     background: #FAFAFA;
     padding: 5px 0 25px 20px;
+    max-width: 320px;
+    width: 100%;
 }
 .coverings__card-img {
-    /* min-height: 239px; */
-    max-width: 274px;
-    padding-left: 50px;
+    max-width: 240px;
+    margin-left: auto;
 }
 .coverings__card-title {
     color: #5E5E5E;
@@ -813,6 +820,9 @@ nav .header__tel {
 .portfolio-slider .swiper-wrapper,
 .portfolio-slider {
     overflow-y: visible !important;
+}
+.portfolio-slider .swiper-wrapper {
+    align-items: center;
 }
 
 .swiper-button-prev {
@@ -1044,6 +1054,10 @@ nav .header__tel {
     opacity: .5;
     filter: invert(1) grayscale(1);
 }
+.feedback-slide {
+    display: flex;
+    justify-content: center;
+}
 
 .feedback__btn {
     display: flex;
@@ -1052,6 +1066,7 @@ nav .header__tel {
     padding: 15px 30px;
     background: #2FDDC0;
     border-radius: 50px;
+    max-width: 265px;
 
     font-weight: 500;
     font-size: 18px;
@@ -1208,23 +1223,23 @@ ul.breadcrumb li+li:before {
     padding-left: 20px;
 }
 
-.categories__list-item {
+.categories__list-link {
     position: relative;
     padding-left: 5px;
 }
-
-.categories__list-item:not(:last-child) {
-    margin-bottom: 20px;
-}
-
-.categories__list-link {
+.categories__list-link a {
     color: #3944DE;
     font-weight: 300;
     font-size: 16px;
     line-height: 20px;
 }
 
-.categories__list-item.active-item::before {
+.categories__list-link:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+
+.categories__list-link.active-item::before {
     content: '';
     position: absolute;
     top: 0;
@@ -1233,7 +1248,7 @@ ul.breadcrumb li+li:before {
     height: 100%;
     border-left: 1px solid #00DCC4;
 }
-.categories__list-item.active-item a {
+.categories__list-link.active-item a {
     color: #000;
 }
 
@@ -1280,6 +1295,7 @@ select {
     border: 1px solid #CECECE;
     border-radius: 8px;
     min-width: 280px;
+    padding-right: 10px;
 
     color: #1F1F1F;
     font-weight: 400;
@@ -1298,6 +1314,7 @@ select {
     appearance: none;
     font-weight: 300;
     border: 0;
+    padding-right: 15px;
 }
 
 .products__filter-sort {
@@ -1316,14 +1333,14 @@ select {
     gap: 24px;
 }
 
-.filter__list-link {
+.filter__list-btn {
     color: #1F1F1F;
     font-weight: 300;
     font-size: 12px;
     line-height: 15px;
 }
 
-.filter__list-item.active-item a {
+.filter__list-btn.active-item {
     text-decoration: underline;
 }
 
@@ -1331,6 +1348,19 @@ select {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 25px;
+}
+
+.categories-item {
+    display: none;
+}
+.categories-item.item-active {
+    display: block;
+}
+.filter-item {
+    order: 2;
+}
+.filter-item.filtered {
+    order: 1;
 }
 
 .product__cards > div {
@@ -1484,15 +1514,29 @@ span.color-picked {
 .product__card-content {
     position: relative;
     display: grid;
-    gap: 25px;
+    gap: 50px;
     grid-template-columns: 40% 50%;
 
     margin-bottom: 60px;
 }
 
 .product-card .product__card-categories {
-    left: unset;
-    right: 0;
+    width: 100%;
+    height: 100%;
+    top: -15px;
+    left: 0;
+}
+.product-card .category-hit {
+    width: 68px;
+    height: 68px;
+}
+.product-card .category-eco {
+    width: 54px;
+    height: 54px;
+}
+.product-card .category-hit img,
+.product-card .category-eco img {
+    width: 100%;
 }
 
 .content__desc {
@@ -1542,9 +1586,10 @@ span.color-picked {
     font-weight: 300;
     font-size: 16px;
     line-height: 20px;
+    white-space: nowrap;
 }
 .content__factures-item.active-item {
-    text-decoration: underline;
+    border-bottom: 1px solid #000;
 }
 
 .counter {
@@ -1580,6 +1625,7 @@ span.color-picked {
     font-weight: 700;
     font-size: 30px;
     line-height: 37px;
+    white-space: nowrap;
 }
 
 .card__price .card__content-title {
@@ -1626,6 +1672,16 @@ span.color-picked {
     line-height: 20px;
 }
 
+.product__card-favourite-btn {
+    width: 16px;
+    height: 16px;
+    background: url('../img/product-card-favourite.svg') no-repeat center;
+    background-size: contain;
+}
+.product__card-favourite-btn.btn-active {
+    background-image: url('../img/product-card-favourite-picked.png');
+}
+
 /* --- Product card end --- */
 /* ----------------------- */
 
@@ -1653,6 +1709,9 @@ main section.intro-bunner {
     grid-template-columns: auto 1fr;
     justify-content: center;
     gap: 130px;
+}
+.about-main .page-content {
+    gap: 330px
 }
 
 .page__navigation-item {
@@ -1741,6 +1800,9 @@ ul.page__navigation .page-show {
 .history-prev,
 .history-next {
     background: url('../img/history-slider.svg') no-repeat center;
+}
+.history-prev {
+    transform: rotate(180deg);
 }
 
 
@@ -1938,8 +2000,12 @@ ul.page__navigation .page-show {
 /* About-reviews */
 
 .reviews-slider {
-    height: 255px;
+    height: 270px;
     width: 100%;
+}
+.reviews-slider .swiper-wrapper {
+    align-items: center;
+    padding-left: 15px;
 }
 
 .about-reviews .slider-btns {
@@ -2437,6 +2503,16 @@ ul.page__navigation .page-show {
     display: flex;
     width: 100%;
     justify-content: space-between;
+}
+
+.basket__item.deleted-item {
+    display: none;
+}
+.review-notification.basket__deleted-notification {
+    display: none;
+}
+.review-notification.basket__deleted-notification.notification-active {
+    display: flex;
 }
 
 /* Order-form */
@@ -3373,6 +3449,8 @@ ul.page__navigation .page-show {
     margin-right: 10px;
     display: inline-block;
     transition: background 0.3s;
+    box-shadow: 0px 4px 4px 0px #00000026;
+
 }
 .circle-checkbox .custom-checkbox::after {
     content: '';
@@ -3427,6 +3505,9 @@ ul.page__navigation .page-show {
     background-image: url('../img/subscriptions-slider-arrow.png');
     width: 40px;
     height: 40px;   
+}
+.account__subscriptions .swiper-button-next {
+    transform: none;
 }
 
 .account-modal .modal__content {
@@ -3750,9 +3831,11 @@ a.footer__bottom-text {
     }
 
     .account-content {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         gap: 50px;
     }
+    .reviews-slider .swiper-wrapper
     .account__list {
         display: flex;
         flex-direction: column;
@@ -4013,6 +4096,13 @@ a.footer__bottom-text {
     .card__content-bottom {
         grid-template-areas: 'price counter'
                               'btn btn';
+
+        gap: 20px;
+        row-gap: 40px;
+    }
+    .product-card-page .card__content-img {
+        width: 70%;
+        margin: 0 auto;
     }
     .card__content-bottom .product__card-btn {
         max-width: 100%;
@@ -4067,7 +4157,7 @@ a.footer__bottom-text {
         top: 100%;
     }
     .work__card-title {
-        max-width: 150px;
+        max-width: 140px;
         text-align: start;
     }
 
@@ -4191,6 +4281,7 @@ a.footer__bottom-text {
     .order-top__btn.a-768 {
         display: flex;
         margin: 0 auto;
+        margin-top: 25px;
     }
     .account__order-blocks {
         margin-bottom: 45px;
@@ -4220,10 +4311,13 @@ a.footer__bottom-text {
         margin-bottom: 30px;
     }
     .order__content .basket__item-subinfo {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     .order__content .subinfo__title.a-992 {
         gap: 24px;
+        grid-column: span 2;
+        font-size: 12px;
+        line-height: 14px;
     }
     .product__card-picture {
         width: max-content;
@@ -4231,7 +4325,7 @@ a.footer__bottom-text {
         gap: 20px;
         margin-bottom: 25px;
     }
-    .product__card {
+    .account-main .product__card {
         max-width: 285px;
         justify-self: center;
     }
@@ -4292,5 +4386,37 @@ a.footer__bottom-text {
     .feedback-slide {
         display: flex;
         justify-content: center;
+    }
+    .porftolio__slide-img, .account__slide-img {
+        height: auto;
+    }
+    .reviews-slider {
+        height: auto;
+        padding-bottom: 15px;
+    }
+    .reviews__card {
+        grid-template-columns: 1fr;
+        max-width: 92%;
+        height: max-content;
+        padding: 25px;
+    }
+    .about-main .page-content {
+        gap: 40px;
+    }
+
+    .team__card {
+        max-width: 100%;
+    }
+    .team__card-img {
+        height: 100%;
+        max-height: 246px;
+        object-fit: contain;
+        margin: 0 auto;
+        display: block;
+    }
+    .account__tab-content-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
     }
 }
