@@ -732,6 +732,13 @@ nav .header__tel {
     margin-bottom: 40px;
 }
 
+.swiper-button-next.advantages-next {
+    background: url('../img/advantages-next.png');
+}
+.swiper-button-next.advantages-next.swiper-button-disabled {
+    filter: grayscale(1);
+}
+
 /* Main-advantages end */
 
 /* Main-work */
