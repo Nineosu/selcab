@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
 </head>
 
 <body>
@@ -67,11 +71,11 @@
                 </div>
 
                 <div class="header__links">
-                    <a href="#!" class="header__links-item modal-btn" data-modal="account-login">
-                        <img src="./img/header__links-account.svg" alt="" class="header__links-ico">
+                    <a href="#!" class="header__links-item">
+                        <img src="./img/header-black__links-account.png" alt="" class="header__links-ico">
                     </a>
                     <a href="./basket.html" class="header__links-item">
-                        <img src="./img/header__links-cart.svg" alt="" class="header__links-ico">
+                        <img src="./img/header-black__links-cart.svg" alt="" class="header__links-ico">
                     </a>
                 </div>
             </div>
@@ -123,7 +127,6 @@
                                     <span class="card__picture-color" data-color="#E80032"></span>
                                 </div>
                             </div>
-
                             <div class="card__content-facture">
                                 <p class="card__content-title">Фактура:</p>
 
@@ -243,16 +246,52 @@
                 <div class="swiper portfolio-slider">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide portfolio-slide">
-                        <img src="./img/portfolio-1.png" alt="" class="porftolio__slide-img">
+                        <div class="account-slide__text">
+                            <p class="account-slide__title">Гараж</p>
+                            <div class="account-slide__subtext">
+                                <p class="account-slide__subtitle">Площадь: <span>33м²</span></p>
+                                <p class="account-slide__subtitle">Цена: <span>164 490₽</span></p>
+                            </div>
+                        </div>
+                        <a href="./img/portfolio-1.png" data-fancybox="portfolio">
+                            <img src="./img/portfolio-1.png" />
+                        </a>
                       </div>
                       <div class="swiper-slide portfolio-slide">
-                        <img src="./img/portfolio-2.png" alt="" class="porftolio__slide-img">
+                        <div class="account-slide__text">
+                            <p class="account-slide__title">Гараж</p>
+                            <div class="account-slide__subtext">
+                                <p class="account-slide__subtitle">Площадь: <span>33м²</span></p>
+                                <p class="account-slide__subtitle">Цена: <span>164 490₽</span></p>
+                            </div>
+                        </div>
+                        <a href="./img/portfolio-2.jpg" data-fancybox="portfolio">
+                            <img src="./img/portfolio-2.jpg" />
+                        </a>
                       </div>
                       <div class="swiper-slide portfolio-slide">
-                        <img src="./img/portfolio-3.png" alt="" class="porftolio__slide-img">
+                        <div class="account-slide__text">
+                            <p class="account-slide__title">Гараж</p>
+                            <div class="account-slide__subtext">
+                                <p class="account-slide__subtitle">Площадь: <span>33м²</span></p>
+                                <p class="account-slide__subtitle">Цена: <span>164 490₽</span></p>
+                            </div>
+                        </div>
+                        <a href="./img/portfolio-3.png" data-fancybox="portfolio">
+                            <img src="./img/portfolio-3.png" />
+                        </a>
                       </div>
                       <div class="swiper-slide portfolio-slide">
-                        <img src="./img/portfolio-1.png" alt="" class="porftolio__slide-img">
+                        <div class="account-slide__text">
+                            <p class="account-slide__title">Гараж</p>
+                            <div class="account-slide__subtext">
+                                <p class="account-slide__subtitle">Площадь: <span>33м²</span></p>
+                                <p class="account-slide__subtitle">Цена: <span>164 490₽</span></p>
+                            </div>
+                        </div>
+                        <a href="./img/portfolio-1.png" data-fancybox="portfolio">
+                            <img src="./img/portfolio-1.png" />
+                        </a>
                       </div>
                     </div>
                 </div>
@@ -563,6 +602,7 @@
             });
         });
     </script>
+     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
 </body>

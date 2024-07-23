@@ -2931,6 +2931,7 @@ ul.page__navigation .page-show {
 }
 .account__list {
     min-width: 240px;
+    position: relative;
 }
 .account__list-item {
     padding: 12px 0;
@@ -3546,6 +3547,8 @@ ul.page__navigation .page-show {
     font-weight: 600;
     font-size: 18px;
     line-height: 22px;
+}
+.account-modal__btn.agree a {
     color: #fff;
 }
 .account-modal__btn.disagree {
