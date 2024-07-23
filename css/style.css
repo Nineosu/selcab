@@ -442,6 +442,19 @@ nav .header__tel {
     gap: 20px;
 }
 
+.header__links span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff;
+}
+
+.header__links-item {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
 /* Header end */
 
 /* --- Main page start --- */
@@ -517,6 +530,16 @@ nav .header__tel {
     line-height: 25px;
 }
 
+.slider__container {
+    position: relative;
+}
+.slider__container .catalog-slider-prev {
+    left: -20px;
+}
+.slider__container .catalog-slider-next {
+    right: -20px;
+}
+
 /* Main-bunner end */
 
 /* Main-catalog start */
@@ -553,16 +576,17 @@ nav .header__tel {
     z-index: 2;
 }
 
-.swiper .catalog-slider-next,
-.swiper .catalog-slider-prev {
+.slider__container .catalog-slider-next,
+.slider__container .catalog-slider-prev {
     width: 58px;
     height: 58px;
     background: url('../img/slider-next-arrow.svg') no-repeat center;
 }
-.swiper .swiper-button-prev {
+.slider__container .swiper-button-prev {
     transform: rotate(180deg);
 }
-.main__catalog-slider .swiper-button-disabled {
+
+.slider__container .swiper-button-disabled {
     opacity: 1;
     filter:brightness(3.5) grayscale(1);
 } 
@@ -1846,6 +1870,10 @@ ul.page__navigation .page-show {
 .history-prev {
     transform: rotate(180deg);
 }
+.history-swiper__btns .swiper-button-disabled {
+    opacity: 1;
+    filter:brightness(3.5) grayscale(1);
+}
 
 
 .timeline__block-date {
@@ -2054,12 +2082,18 @@ ul.page__navigation .page-show {
     top: -5%;
 }
 .reviews-prev {
-    background: url(../img/portfolio-next.png) no-repeat center;
-    transform: rotate(180deg);
+    background: url(../img/portfolio-prev.png) no-repeat center;
 }
 .reviews-next {
     background: url(../img/portfolio-prev.png) no-repeat center;
     transform: rotate(180deg);
+}
+.about-reviews .swiper-button-disabled {
+    background-image: url('../img/portfolio-next.png');
+    transform: rotate(180deg);
+}
+.reviews-next.swiper-button-disabled {
+    transform: none;
 }
 
 .reviews__card {
@@ -2322,6 +2356,12 @@ ul.page__navigation .page-show {
 
 .contacts-team .swiper-button-next {
     background-image: url('../img/team-next.svg');
+}
+.contacts-team .swiper-button-disabled {
+    background-image: url('../img/portfolio-next.png');
+}
+.team-prev.swiper-button-disabled {
+    transform: rotate(180deg);
 }
 
 #scheme-map {
@@ -2924,12 +2964,13 @@ ul.page__navigation .page-show {
     background: url('../img/slider-next-arrow.svg') no-repeat center;
     background-size: contain;
 }
-.swiper .account-prev.swiper-button-disabled {
+.account-slider .swiper-button-disabled {
     opacity: 1;
     filter: brightness(3.5) grayscale(1);
 }
 .swiper .account-prev {
     left: 135px;
+    transform: rotate(180deg);
 }
 .swiper .account-next {
     right: 135px;
@@ -3816,6 +3857,9 @@ a.footer__bottom-text {
     #nav-burger {
         display: block;
     }
+    .header__links-item span {
+        display: none;
+    }
     .header__nav {
         display: flex;
         justify-content: center;
@@ -3989,6 +4033,10 @@ a.footer__bottom-text {
         width: 100%;
         display: grid;
         grid-template-columns: .6fr 1fr;align-items: center;
+    }
+    .account__list-item.active-tab {
+        padding-left: 0;
+        border-left: none;
     }
     
 }
