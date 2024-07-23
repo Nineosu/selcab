@@ -2957,6 +2957,9 @@ ul.page__navigation .page-show {
     align-items: center;
     gap: 12px;
 }
+.account__list-item.hide {
+    display: none;
+}
 
 .review-notification {
     padding: 20px 10px 20px 20px;
@@ -3212,6 +3215,9 @@ ul.page__navigation .page-show {
     flex-wrap: wrap;
     max-width: 90%;
 }
+.account-personalization.hide {
+    display: none;
+}
 .personalization__subtitle {
     margin-bottom: 20px;
 }
@@ -3238,6 +3244,7 @@ ul.page__navigation .page-show {
     box-shadow: 0px 4px 20px 0px #0000001A;
     border-radius: 4px;
     margin-bottom: 20px;
+    display: none;
 }
 .account__order:last-child {
     margin-bottom: 0;
@@ -4247,6 +4254,11 @@ a.footer__bottom-text {
     }
     .portfolio-slide.swiper-slide-active, .account-slide.swiper-slide-active {
         transform: none;
+    }
+    .portfolio-slide, .account-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .account-title {
         margin-bottom: 10px;

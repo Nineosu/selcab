@@ -454,6 +454,61 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // account orders pagination
+    if (document.querySelector('.account__orders')) {
+        // Получаем все элементы order
+        const orders = document.querySelectorAll('.account__order');
+        const buttons = document.querySelectorAll('.pagination button:not(.pagination-prev):not(.pagination-next)');
+        let currentPage = 1;
+        const itemsPerPage = 2;
+
+        // Функция для отображения нужных элементов
+        function showPage(page) {
+            // Прячем все элементы
+            orders.forEach(order => order.style.display = 'none');
+
+            // Вычисляем индексы элементов для отображения
+            const start = (page - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+
+            // Показываем только нужные элементы
+            for (let i = start; i < end && i < orders.length; i++) {
+                orders[i].style.display = 'block';
+            }
+
+            // Обновляем активную кнопку
+            buttons.forEach(button => button.classList.remove('active'));
+            if (page <= buttons.length) {
+                buttons[page - 1].classList.add('active');
+            }
+        }
+
+        // Обработчики событий для кнопок пагинации
+        buttons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                currentPage = index + 1;
+                showPage(currentPage);
+            });
+        });
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage--;
+                showPage(currentPage);
+            }
+        });
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            if (currentPage < Math.ceil(orders.length / itemsPerPage)) {
+                currentPage++;
+                showPage(currentPage);
+            }
+        });
+
+        // Показываем первую страницу по умолчанию
+        showPage(currentPage);
+    }
+
     // account order list
     if (document.querySelector('.account__order')) {
         const orders = document.querySelectorAll('.account__order');
@@ -469,51 +524,16 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // pagination
-    const paginations = document.querySelectorAll('.pagination');
-
-    paginations.forEach(item => {
-        const prevBtn = item.querySelector('.pagination-prev');
-        const nextBtn = item.querySelector('.pagination-next');
-        const pageButtons = item.querySelectorAll('.pagination button:not(#prevBtn):not(#nextBtn)');
-        
-    
-        function updateButtons() {
-            const currentPage = document.querySelector('.pagination button.active');
-            const currentPageIndex = Array.from(pageButtons).indexOf(currentPage);
-    
-            prevBtn.classList.toggle('disabled', currentPageIndex === 0);
-            nextBtn.classList.toggle('disabled', currentPageIndex === pageButtons.length - 1);
-        }
-    
-        prevBtn.addEventListener('click', () => {
-            const currentPage = document.querySelector('.pagination button.active');
-            const prevPage = currentPage.previousElementSibling;
-            if (prevPage && prevPage !== prevBtn) {
-            currentPage.classList.remove('active');
-            prevPage.classList.add('active');
-            updateButtons();
-            }
-        });
-    
-        nextBtn.addEventListener('click', () => {
-            const currentPage = document.querySelector('.pagination button.active');
-            const nextPage = currentPage.nextElementSibling;
-            if (nextPage && nextPage !== nextBtn) {
-            currentPage.classList.remove('active');
-            nextPage.classList.add('active');
-            updateButtons();
-            }
-        });
-    
-        // Инициализация состояния кнопок при загрузке
-        updateButtons();
-    });
+    Fancybox.bind("[data-fancybox]", {
+        // Your custom options
+      });
 
     // account types
     if (document.querySelector('.accountTypeBtn')) {
         const btns = document.querySelectorAll('.accountTypeBtn'),
-              forms = document.querySelectorAll('.formBlock');
+              forms = document.querySelectorAll('.formBlock'),
+              tabsItems = document.querySelectorAll('.account__list-item'),
+              categories = document.querySelector('.account-personalization');
 
         btns.forEach(btn => {
             btn.addEventListener('click', () => {
@@ -532,6 +552,24 @@ window.addEventListener('DOMContentLoaded', () => {
                         form.classList.add('active-type');
                     }
                 });
+
+                tabsItems.forEach(item => {
+                    item.classList.remove('hide');
+                });
+                
+                tabsItems.forEach(item => {
+                    if (btn.getAttribute('data-type') == 'entity') {
+                        if (item.classList.contains('entity-inactive')) {
+                            item.classList.add('hide')
+                        }
+                    }
+                });
+
+                if (btn.getAttribute('data-type') == 'entity') {
+                    categories.classList.add('hide');
+                } else {
+                    categories.classList.remove('hide');
+                }
             });
         });
     }

@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
 </head>
 
 <body>
@@ -104,7 +108,9 @@
                                 </div>
                             </div>
 
-                            <img src="./img/portfolio-1.png" alt="" class="account__slide-img">
+                            <a href="./img/portfolio-1.png" data-fancybox="portfolio">
+                                <img src="./img/portfolio-1.png" />
+                            </a>
                           </div>
                           <div class="swiper-slide account-slide">
                             <div class="account-slide__text">
@@ -115,7 +121,9 @@
                                 </div>
                             </div>
 
-                            <img src="./img/portfolio-2.jpg" alt="" class="account__slide-img">
+                            <a href="./img/portfolio-2.jpg" data-fancybox="portfolio">
+                                <img src="./img/portfolio-2.jpg" />
+                            </a>
                           </div>
                           <div class="swiper-slide account-slide">
                             <div class="account-slide__text">
@@ -126,7 +134,9 @@
                                 </div>
                             </div>
 
-                            <img src="./img/portfolio-3.png" alt="" class="account__slide-img">
+                            <a href="./img/portfolio-3.png" data-fancybox="portfolio">
+                                <img src="./img/portfolio-3.png" />
+                            </a>
                           </div>
                           <div class="swiper-slide account-slide">
                             <div class="account-slide__text">
@@ -152,8 +162,8 @@
                     <li class="account__list-item active-tab tabs__list-item" data-tab="1">Контактная информация</li>
                     <li class="account__list-item tabs__list-item" data-tab="2">Текущие заказы</li>
                     <li class="account__list-item tabs__list-item" data-tab="3">История заказов</li>
-                    <li class="account__list-item tabs__list-item" data-tab="4">Избранное</li>
-                    <li class="account__list-item tabs__list-item" data-tab="5">Мои подписки</li>
+                    <li class="account__list-item tabs__list-item entity-inactive" data-tab="4">Избранное</li>
+                    <li class="account__list-item tabs__list-item entity-inactive" data-tab="5">Мои подписки</li>
                     <li class="account__list-item tabs__list-item" data-tab="6">Профили заказов</li>
                     <li class="account__list-item quit-btn modal-btn" data-modal="account-quit">
                         <img src="./img/account-exit.svg" alt="">
@@ -326,7 +336,7 @@
                         <div class="account__tab-content">
                             <p class="account__tab-main-title">Текущие заказы</p>
 
-                            <div class="account__orders">
+                            <div class="account__orders-current">
                                 <div class="account__order">
                                     <div class="account__order-top">
                                         <p class="order-top__title account__tab-title">Заказ №409 от 01.08.2023</p>
@@ -778,6 +788,174 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="account__order">
+                                    <div class="account__order-top">
+                                        <p class="order-top__title account__tab-title">Заказ №289 от 27.07.2023</p>
+
+                                        <div class="order-top__btns">
+                                            <button class="order-top__btn order-top__repeat">
+                                                <img src="./img/order-repeat.svg" alt="">
+                                                Повторить заказ
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="account__order-blocks">
+                                        <div class="account__order-block">
+                                            <p class="account__order-text">Кол-во м<sup>2</sup>: 1 </p>
+                                            <p class="account__order-text">Общая сумма: <span>1 330 ₽</span></p>
+                                            <div class="account__order-state">
+                                                <p class="order-state__text">Оплата по СБП</p>
+                                                <p class="order-state__value not-done">Отменен</p>
+                                            </div>
+                                        </div>
+                                        <div class="account__order-block">
+                                            <p class="account__order-text"><span>Доставка:</span></p>
+                                            <div class="account__order-delivery">
+                                                <p class="account__order-text">Отгрузка №409/2</p>
+
+                                                <p class="order-state__value blue-state">Стоимость: <span>0.00₽</span></p>
+                                            </div>
+
+                                            <div class="account__order-state">
+                                                <p class="order-state__text">Служба доставки: Самовывоз</p>
+                                                <p class="order-state__value not-done">Отменен</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <button class="account__order-more">Подробнее о заказе <img src="./img/arrow-down_white.svg" alt=""></button>
+
+                                    <div class="order__content">
+                                        <p class="order__content-title account__tab-title">Содержимое заказа:</p>
+                                        <div class="order__content-items">
+                                            <div class="basket__item order__content-item">
+                                                <img src="./img/product-card-1.png" alt="" class="basket__item-img">
+                    
+                                                <div class="basket__item-info">
+                                                    <a href="./product-card.html" class="basket__item-title">LT mini silver Coin PVC</a>
+                    
+                                                    <div class="basket__item-subinfo">
+                                                        <div class="item__subinfo-factura">
+                                                            <p class="subinfo__title">Фактура:</p>
+                                                            <p class="subinfo__factura-subtitle">Diamond (Металл)</p>
+                                                        </div>
+                                                        <div class="item__subinfo-color">
+                                                            <p class="subinfo__title">Цвет:</p>
+                                                            <span class="subinfo__color color-D9D9D9"></span>
+                                                        </div>
+                                                        <div class="item__subinfo-amount">
+                                                            <p class="subinfo__title">Кол-во:</p>
+                    
+                                                            <span class="counter-num">1</span>
+                                                        </div>
+                                                        <div class="item__subinfo-amount">
+                                                            <p class="subinfo__title">Общая сумма заказа:</p>
+                    
+                                                            <span class="counter-num">1 330 ₽</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                    
+                                                <p class="subinfo__title a-992">Кол-во:</p>
+                    
+                                                <!-- <div class="basket__item-counter counter a-992">
+                                                    <button class="counter-decrement">
+                                                        <img src="./img/counter-decrement.svg" alt="" class="counter__decrement-img">
+                                                    </button>
+                                                    <span class="counter-num">1</span>
+                                                    <button class="counter-increment">
+                                                        <img src="./img/counter-increment.svg" alt="" class="counter__increment-img">
+                                                    </button>
+                                                </div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="account__order">
+                                    <div class="account__order-top">
+                                        <p class="order-top__title account__tab-title">Заказ №289 от 27.07.2023</p>
+
+                                        <div class="order-top__btns">
+                                            <button class="order-top__btn order-top__repeat">
+                                                <img src="./img/order-repeat.svg" alt="">
+                                                Повторить заказ
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="account__order-blocks">
+                                        <div class="account__order-block">
+                                            <p class="account__order-text">Кол-во м<sup>2</sup>: 1 </p>
+                                            <p class="account__order-text">Общая сумма: <span>1 330 ₽</span></p>
+                                            <div class="account__order-state">
+                                                <p class="order-state__text">Оплата по СБП</p>
+                                                <p class="order-state__value not-done">Отменен</p>
+                                            </div>
+                                        </div>
+                                        <div class="account__order-block">
+                                            <p class="account__order-text"><span>Доставка:</span></p>
+                                            <div class="account__order-delivery">
+                                                <p class="account__order-text">Отгрузка №409/2</p>
+
+                                                <p class="order-state__value blue-state">Стоимость: <span>0.00₽</span></p>
+                                            </div>
+
+                                            <div class="account__order-state">
+                                                <p class="order-state__text">Служба доставки: Самовывоз</p>
+                                                <p class="order-state__value not-done">Отменен</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <button class="account__order-more">Подробнее о заказе <img src="./img/arrow-down_white.svg" alt=""></button>
+
+                                    <div class="order__content">
+                                        <p class="order__content-title account__tab-title">Содержимое заказа:</p>
+                                        <div class="order__content-items">
+                                            <div class="basket__item order__content-item">
+                                                <img src="./img/product-card-1.png" alt="" class="basket__item-img">
+                    
+                                                <div class="basket__item-info">
+                                                    <a href="./product-card.html" class="basket__item-title">LT mini silver Coin PVC</a>
+                    
+                                                    <div class="basket__item-subinfo">
+                                                        <div class="item__subinfo-factura">
+                                                            <p class="subinfo__title">Фактура:</p>
+                                                            <p class="subinfo__factura-subtitle">Diamond (Металл)</p>
+                                                        </div>
+                                                        <div class="item__subinfo-color">
+                                                            <p class="subinfo__title">Цвет:</p>
+                                                            <span class="subinfo__color color-D9D9D9"></span>
+                                                        </div>
+                                                        <div class="item__subinfo-amount">
+                                                            <p class="subinfo__title">Кол-во:</p>
+                    
+                                                            <span class="counter-num">1</span>
+                                                        </div>
+                                                        <div class="item__subinfo-amount">
+                                                            <p class="subinfo__title">Общая сумма заказа:</p>
+                    
+                                                            <span class="counter-num">1 330 ₽</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                    
+                                                <p class="subinfo__title a-992">Кол-во:</p>
+                    
+                                                <!-- <div class="basket__item-counter counter a-992">
+                                                    <button class="counter-decrement">
+                                                        <img src="./img/counter-decrement.svg" alt="" class="counter__decrement-img">
+                                                    </button>
+                                                    <span class="counter-num">1</span>
+                                                    <button class="counter-increment">
+                                                        <img src="./img/counter-increment.svg" alt="" class="counter__increment-img">
+                                                    </button>
+                                                </div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="pagination">
                                 <button class="pagination-prev" id="prevBtn">
@@ -793,7 +971,7 @@
                                 <button class="pagination-next" id="nextBtn">
                                     <img src="./img/pagination-next.svg" alt="">
                                 </button>
-                              </div>
+                            </div>
                         </div>
                     </div>
                     <div class="account__tab tabs__item account__favourites" data-tab="4">
@@ -1110,6 +1288,7 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
 </body>
