@@ -442,11 +442,14 @@ nav .header__tel {
     gap: 20px;
 }
 
-.header__links span {
+.header__links-item span {
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
     color: #fff;
+}
+.header-white .header__links-item span {
+    color: #000;
 }
 
 .header__links-item {
