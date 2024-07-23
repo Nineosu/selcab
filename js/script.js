@@ -524,9 +524,11 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    Fancybox.bind("[data-fancybox]", {
-        // Your custom options
-      });
+    if (document.querySelector('[data-fancybox]')) {
+        Fancybox.bind("[data-fancybox]", {
+            // Your custom options
+        });
+    }
 
     // account types
     if (document.querySelector('.accountTypeBtn')) {

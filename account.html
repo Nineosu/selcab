@@ -30,22 +30,22 @@
 
                             <ul class="header__subnav-list">
                                 <li class="header__subnav-item">
-                                    <a href="./catalog.html" class="header__subnav-link">Гаражи и парковки</a>
+                                    <a href="./catalog.html" class="header__subnav-link" data-category="garages">Гаражи и парковки</a>
                                 </li>
                                 <li class="header__subnav-item">
-                                    <a href="./catalog.html" class="header__subnav-link">Тренажерные залы и фитнес-клубы</a>
+                                    <a href="./catalog.html" class="header__subnav-link" data-category="gyms">Тренажерные залы и фитнес-клубы</a>
                                 </li>
                                 <li class="header__subnav-item">
-                                    <a href="./catalog.html" class="header__subnav-link">Автосервисы и автомойки</a>
+                                    <a href="./catalog.html" class="header__subnav-link" data-category="autos">Автосервисы и автомойки</a>
                                 </li>
                                 <li class="header__subnav-item">
-                                    <a href="./catalog.html" class="header__subnav-link">Складские и промышленные помещения</a>
+                                    <a href="./catalog.html" class="header__subnav-link" data-category="storages">Складские и промышленные помещения</a>
                                 </li>
                                 <li class="header__subnav-item">
-                                    <a href="./catalog.html" class="header__subnav-link">Модульный пол</a>
+                                    <a href="./catalog.html" class="header__subnav-link" data-category="module-floor">Модульный пол</a>
                                 </li>
                                 <li class="header__subnav-item">
-                                    <a href="./catalog.html" class="header__subnav-link">Смотреть все</a>
+                                    <a href="./catalog.html" class="header__subnav-link" data-category="all">Смотреть все</a>
                                 </li>
                             </ul>
                         </li>
@@ -1288,6 +1288,15 @@
         </div>
     </div>
 
+    <script>
+        document.querySelectorAll('.header__subnav-link').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const dataCategory = this.getAttribute('data-category');
+                window.location.href = this.href + '?category=' + encodeURIComponent(dataCategory);
+            });
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
