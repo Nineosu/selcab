@@ -425,6 +425,21 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     };
 
+    // factures
+    if (document.querySelector('.content__factures-item')) {
+        const facturesItems = document.querySelectorAll('.content__factures-item');
+
+        facturesItems.forEach(item => {
+            item.addEventListener('click', () => {
+                facturesItems.forEach(item => {
+                    item.classList.remove('active-item');
+                });
+
+                item.classList.add('active-item');
+            });
+        });
+    }
+
     // Tabs
 
     if (document.querySelector('.tabs__list') || document.querySelector('.tabs__items')) {
