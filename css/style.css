@@ -1456,6 +1456,7 @@ span.card__picture-color:hover {
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
+    min-height: 40px;
 
     margin-bottom: 18px;
 }
