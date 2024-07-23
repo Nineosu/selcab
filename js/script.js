@@ -101,7 +101,7 @@ window.addEventListener('DOMContentLoaded', () => {
         loop: false,
         centeredSlides: true,
         slidesPerView: 1,
-        spaceBetween: 20,
+        spaceBetween: 0,
         initialSlide: 1,
 
         breakpoints: {
@@ -237,6 +237,56 @@ window.addEventListener('DOMContentLoaded', () => {
             questionMinus.classList.toggle('question-open');
         });
     });
+
+    // basket delete
+
+    if (document.querySelector('.basket__item') && document.querySelector('.basket__deleted-notification')) {
+        const basketItems = document.querySelectorAll('.basket__item');
+        
+        const deletedNotification = document.querySelector('.basket__deleted-notification');
+
+        basketItems.forEach(item => {
+            const deleteBtn = item.querySelector('.delete-btn');
+
+            deleteBtn.addEventListener('click', () => {
+                item.classList.add('deleted-item');
+                basketDelete(true);
+            });
+        });
+
+        const returnBtn = deletedNotification.querySelector('.return-btn');
+
+        returnBtn.addEventListener('click', () => {
+            basketItems.forEach(item => {
+                item.classList.remove('deleted-item');
+            });
+
+            basketDelete(false);
+        });
+
+        function basketDelete(state) {
+            if (state == true) {
+                deletedNotification.classList.add('notification-active');
+            } else {
+                deletedNotification.classList.remove('notification-active')
+            }
+        };
+
+        basketItems.forEach(item => {
+            const itemCounter = item.querySelector('.basket__item-counter');
+            const counterValue = itemCounter.querySelector('.counter-num');
+            const counterBtns = itemCounter.querySelectorAll('button');
+
+            counterBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    if (e.target.closest('button').classList.contains('counter-decrement') && counterValue.innerHTML == 1) {
+                        item.classList.add('deleted-item');
+                        basketDelete(true)
+                    }
+                });
+            });
+        }); 
+    }
     
     // Counter
     
@@ -656,39 +706,30 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // basket delete
-
-    if (document.querySelector('.basket__item') && document.querySelector('.basket__deleted-notification')) {
-        const basketItems = document.querySelectorAll('.basket__item');
-        
-        const deletedNotification = document.querySelector('.basket__deleted-notification');
-
-        basketItems.forEach(item => {
-            const deleteBtn = item.querySelector('.delete-btn');
-
-            deleteBtn.addEventListener('click', () => {
-                item.classList.add('deleted-item');
-                basketDelete(true);
+    // categories select
+    if (document.querySelector('.categories__select')) {
+        const dropdown = document.querySelector('.dropdown');
+        const toggleButton = document.querySelector('.dropdown-toggle');
+        const categoryList = document.querySelector('#categories-select');
+        const listItems = categoryList.querySelectorAll('li');
+    
+        toggleButton.addEventListener('click', function () {
+            dropdown.classList.toggle('open');
+        });
+    
+        listItems.forEach(item => {
+            item.addEventListener('click', function () {
+                const selectedCategory = this.innerText;
+                toggleButton.innerText = selectedCategory;
+                dropdown.classList.remove('open');
             });
         });
-
-        const returnBtn = deletedNotification.querySelector('.return-btn');
-
-        returnBtn.addEventListener('click', () => {
-            basketItems.forEach(item => {
-                item.classList.remove('deleted-item');
-            });
-
-            basketDelete(false);
-        });
-
-        function basketDelete(state) {
-            if (state == true) {
-                deletedNotification.classList.add('notification-active');
-            } else {
-                deletedNotification.classList.remove('notification-active')
+    
+        document.addEventListener('click', function (event) {
+            if (!dropdown.contains(event.target)) {
+                dropdown.classList.remove('open');
             }
-        };
+        });
     }
     
     // Yandex map

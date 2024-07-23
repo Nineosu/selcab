@@ -1058,6 +1058,12 @@ nav .header__tel {
     display: flex;
     justify-content: center;
 }
+.feedback-slide:first-child img {
+    max-width: 200px;
+}
+.feedback-bunner .swiper-wrapper {
+    align-items: center;
+}
 
 .feedback__btn {
     display: flex;
@@ -1253,6 +1259,31 @@ ul.breadcrumb li+li:before {
 }
 
 .categories__select {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* Скрыть список по умолчанию */
+}
+
+.categories__select li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.categories__select li:hover {
+    background-color: #f0f0f0;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.catalog__categories-dropdown {
+    display: none;
+}
+
+.dropdown-toggle {
     width: 100%;
     appearance: none;
     -webkit-appearance: none; /* Safari и Chrome */
@@ -1260,11 +1291,14 @@ ul.breadcrumb li+li:before {
     -ms-appearance: none; /* IE */
     outline: none;
     cursor: pointer;
-    background: url('../img/header-black__link-arrow.svg') no-repeat 95%;
+    background: url('../img/header-black__link-arrow.svg') no-repeat 95% 25px;
     box-shadow: 0px 4px 20px 0px #0000001A;
     padding: 20px;
-    
-    display: none;
+    text-align: left;
+}
+
+.dropdown.open .categories__select {
+    display: block; /* Показать список при открытом состоянии */
 }
 
 .products__filter {
@@ -1680,7 +1714,7 @@ span.color-picked {
     background-size: contain;
 }
 .product__card-favourite-btn.btn-active {
-    background-image: url('../img/product-card-favourite-picked.png');
+    background-image: url('../img/product-card-favourite-picked.svg');
 }
 
 /* --- Product card end --- */
@@ -2333,6 +2367,10 @@ ul.page__navigation .page-show {
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: flex-start;
+    margin-bottom: 20px;
+}
+.basket__item:last-child {
+    margin-bottom: 0;
 }
 
 .basket__item-info {
@@ -2884,10 +2922,10 @@ ul.page__navigation .page-show {
     filter: brightness(3.5) grayscale(1);
 }
 .swiper .account-prev {
-    left: 125px;
+    left: 135px;
 }
 .swiper .account-next {
-    right: 125px;
+    right: 135px;
 }
 .account-slider .portfolio-slide:not(.swiper-slide-active) {
     filter: opacity(.5)
@@ -2900,6 +2938,9 @@ ul.page__navigation .page-show {
 }
 .account-slide {
     position: relative;
+}
+.account-slide:not(.swiper-slide-active) {
+    opacity: .5;
 }
 .account-slide__text {
     position: absolute;
@@ -3065,6 +3106,7 @@ ul.page__navigation .page-show {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 25px;
+    gap: 20px;
 }
 .contact-info__social-title {
     font-weight: 500;
@@ -3075,6 +3117,9 @@ ul.page__navigation .page-show {
     display: flex;
     align-items: center;
     gap: 30px;
+}
+.contact-info__social-link img {
+    min-width: 30px;
 }
 
 .contact-info__form {
@@ -4043,9 +4088,9 @@ a.footer__bottom-text {
     .catalog__categories {
         display: none;
     }
-    .categories__select {
+    /* .categories__select {
         display: block;
-    }
+    } */
     .catalog__categories-title {
         display: none;
     }
@@ -4248,6 +4293,10 @@ a.footer__bottom-text {
         width: 22px;
         height: 22px;
     }
+    .swiper .account-prev,
+    .swiper .account-next {
+        top: 60%;
+    }
     .account-slide__title {
         font-size: 10px;
         line-height: 12px;
@@ -4409,10 +4458,14 @@ a.footer__bottom-text {
     .reviews-slider {
         height: auto;
         padding-bottom: 15px;
+        overflow: visible;
+    }
+    .reviews-slider .swiper-wrapper {
+        padding-left: 0;
     }
     .reviews__card {
         grid-template-columns: 1fr;
-        max-width: 92%;
+        max-width: 100%;
         height: max-content;
         padding: 25px;
     }
@@ -4433,6 +4486,12 @@ a.footer__bottom-text {
     .account__tab-content-top {
         flex-direction: column;
         align-items: flex-start;
+        gap: 15px;
+    }
+    .catalog__categories-dropdown {
+        display: block;
+    }
+    .contact-info__social-links {
         gap: 15px;
     }
 }

@@ -67,7 +67,7 @@
                 </div>
 
                 <div class="header__links">
-                    <a href="#!" class="header__links-item">
+                    <a href="#!" class="header__links-item modal-btn" data-modal="account-login">
                         <img src="./img/header-black__links-account.png" alt="" class="header__links-ico">
                     </a>
                     <a href="./basket.html" class="header__links-item">
@@ -174,25 +174,17 @@
                             </li>
                         </ul>
                     </div>
-                    <select name="categories" id="categories-select" class="categories__select">
-                        <option value="">Смотреть все</option>
-                        <option value="garages">
-                            <a href="#!" class="categories__list-link" data-category="garages">Гаражи и парковки</a>
-                        </option>
-                        <option value="gyms">
-                            <a href="#!" class="categories__list-link" data-category="gyms">Тренажерные залы и фитнес-клубы</a>
-                        </option>
-                        <option value="autos">
-                            <a href="#!" class="categories__list-link" data-category="autos">Автосервисы и автомойки</a>
-                        </option>
-                        <option value="storages">
-                            <a href="#!" class="categories__list-link" data-category="storages">Складские и промышленные помещения</a>
-                        </option>
-                        <option value="module-floor">
-                            <a href="#!" class="categories__list-link" data-category="module-floor">Модульный пол</a>
-                        </option>
-                        
-                    </select>
+                    <div class="dropdown catalog__categories-dropdown">
+                        <button class="dropdown-toggle">Выберите категорию</button>
+                        <ul name="categories" id="categories-select" class="categories__select">
+                            <li class="categories__list-link" data-category="garages">Гаражи и парковки</li>
+                            <li class="categories__list-link" data-category="gyms">Тренажерные залы и фитнес-клубы</li>
+                            <li class="categories__list-link" data-category="autos">Автосервисы и автомойки</li>
+                            <li class="categories__list-link" data-category="storages">Складские и промышленные помещения</li>
+                            <li class="categories__list-link" data-category="module-floor">Модульный пол</li>
+                            <li class="categories__list-link" data-category="all">Смотреть все</li>
+                        </ul>
+                    </div>
                     <div class="catalog__products">
                         <div class="products__filter">
                             <div class="products__filter-factura">
