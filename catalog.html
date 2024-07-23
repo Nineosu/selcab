@@ -690,6 +690,30 @@
         });
     </script>
     <script>
+        const dropdown = document.querySelector('.dropdown');
+        const toggleButton = document.querySelector('.dropdown-toggle');
+        const categoryList = document.querySelector('#categories-select');
+        const listItems = categoryList.querySelectorAll('li');
+        const categoriesItems = document.querySelectorAll('.categories-item');
+    
+        toggleButton.addEventListener('click', function () {
+            dropdown.classList.toggle('open');
+        });
+    
+        listItems.forEach(item => {
+            item.addEventListener('click', function () {
+                const selectedCategory = this.innerText;
+                toggleButton.innerText = selectedCategory;
+                dropdown.classList.remove('open');
+            });
+        });
+    
+        document.addEventListener('click', function (event) {
+            if (!dropdown.contains(event.target)) {
+                dropdown.classList.remove('open');
+            }
+        });
+
         function getParameterByName(name) {
             const urlParams = new URLSearchParams(window.location.search);
             return urlParams.get(name);
@@ -704,6 +728,23 @@
                 });
                 targetElement.classList.add('active-item');
             }
+
+            listItems.forEach(item => {
+                if (item.getAttribute('data-category') == category) {
+                    toggleButton.innerText = item.innerText;
+                    item.classList.add('active-item');
+                    
+                    categoriesItems.forEach(categoryItem => {
+                        categoryItem.classList.remove('item-active');
+                    });
+
+                    categoriesItems.forEach(categoryItem => {
+                        if (item.getAttribute('data-category') == categoryItem.getAttribute('data-category')) {
+                            categoryItem.classList.add('item-active');
+                        }
+                    });
+                }
+            }); 
         }
     </script>
     <script src="./js/swiper-bundle.min.js"></script>

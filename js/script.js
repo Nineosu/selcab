@@ -708,28 +708,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // categories select
     if (document.querySelector('.categories__select')) {
-        const dropdown = document.querySelector('.dropdown');
-        const toggleButton = document.querySelector('.dropdown-toggle');
-        const categoryList = document.querySelector('#categories-select');
-        const listItems = categoryList.querySelectorAll('li');
-    
-        toggleButton.addEventListener('click', function () {
-            dropdown.classList.toggle('open');
-        });
-    
-        listItems.forEach(item => {
-            item.addEventListener('click', function () {
-                const selectedCategory = this.innerText;
-                toggleButton.innerText = selectedCategory;
-                dropdown.classList.remove('open');
-            });
-        });
-    
-        document.addEventListener('click', function (event) {
-            if (!dropdown.contains(event.target)) {
-                dropdown.classList.remove('open');
-            }
-        });
+        
     }
     
     // Yandex map
