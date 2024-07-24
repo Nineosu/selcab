@@ -706,9 +706,12 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // categories select
-    if (document.querySelector('.categories__select')) {
-        
+    if (document.querySelector('.nav-link-more')) {
+        if (window.innerWidth <= 992) {
+            document.querySelector('.nav-link-more').addEventListener('click', (e) => {
+                e.preventDefault();
+            })
+        }
     }
     
     // Yandex map

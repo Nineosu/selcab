@@ -506,7 +506,7 @@ nav .header__tel {
 
 .main__left-block {
     padding: 30px 50px;
-    background: #3944DE;
+    background: #006BDA;
 }
 .left__block-title {
     color: #FFFFFF;
@@ -606,7 +606,7 @@ nav .header__tel {
     display: block;
     width: max-content;
     margin: 0 auto;
-    background: #3944DE;
+    background: #006BDA;
     border-radius: 50px;
     padding: 18px 36px;
 
@@ -3687,7 +3687,7 @@ ul.page__navigation .page-show {
 /* Footer */
 
 .footer {
-    background: #1E1E1E;
+    background: #0F0F0F;
 }
 
 .footer__wrapper {
@@ -4556,5 +4556,8 @@ a.footer__bottom-text {
     }
     .contact-info__social-links {
         gap: 15px;
+    }
+    .main__catalog-btns {
+        display: none;
     }
 }
