@@ -1092,6 +1092,9 @@ nav .header__tel {
     display: flex;
     justify-content: center;
 }
+.feedback-slide img {
+    max-height: 150px;
+}
 .feedback-slide:first-child img {
     max-width: 200px;
 }
