@@ -145,11 +145,11 @@ window.addEventListener('DOMContentLoaded', () => {
     const feedbackSlider = new Swiper('.feedback-slider', {
         direction: 'horizontal',
         slidesPerView: 1,
-        spaceBetween: 30,
+        spaceBetween: 0,
 
         breakpoints: {
             768: {
-                slidesPerView: 1.2,
+                slidesPerView: 1,
             }
         },
 
