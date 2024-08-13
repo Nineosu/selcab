@@ -898,6 +898,21 @@ nav .header__tel {
     z-index: 2;
 }
 
+.portfolio-slide a {
+    width: 100%;
+}
+
+.portfolio-slide img {
+    max-height: 268px;
+    object-fit: cover;
+    width: 100%;
+}
+.account-slider .portfolio-slide img {
+    max-height: 100px;
+    object-fit: cover;
+    width: 100%;
+}
+
 /* Main-portfolio end */
 
 /* Main-request */
@@ -4340,7 +4355,7 @@ a.footer__bottom-text {
     .account-slider {
         max-width: 150px;
         margin-right: 10px;
-        overflow-x: visible;
+        /* overflow-x: visible; */
     }
     .account__bunner-title {
         font-size: 15px;
@@ -4350,12 +4365,12 @@ a.footer__bottom-text {
         opacity: 0;
     }
     .swiper .account-prev {
-        left: -10px;
+        left: 0px;
         width: 22px;
         height: 22px;
     }
     .swiper .account-next {
-        right: -10px;
+        right: 0px;
         width: 22px;
         height: 22px;
     }

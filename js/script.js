@@ -41,8 +41,8 @@ window.addEventListener('DOMContentLoaded', () => {
         direction: 'horizontal',
         loop: false,
         centeredSlides: true,
-        slidesPerView: 1.2,
-        spaceBetween: 20,
+        slidesPerView: 1,
+        spaceBetween: 0,
         initialSlide: 1,
 
         breakpoints: {
